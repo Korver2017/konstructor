@@ -1,6 +1,6 @@
 {
-  "name": "vookmark",
-  "version": "0.0.0",
+  "name": "konstructor",
+  "version": "0.1.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -8,6 +8,10 @@
   },
   "dependencies": {
     "pinia": "^2.0.16",
+    "unplugin-auto-import": "^0.10.1",
+    "unplugin-vue-components": "^0.21.2",
+    "vite-plugin-pages": "^0.25.0",
+    "vite-plugin-vue-layouts": "^0.7.0",
     "vue": "^3.2.37",
     "vue-router": "^4.1.2"
   },
