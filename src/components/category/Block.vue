@@ -1,6 +1,8 @@
 <template>
-  <Header />
-  <Category />
+  <div class="row">
+    <Title />
+    <Items />
+  </div>
 </template>
 
 <script setup></script>
