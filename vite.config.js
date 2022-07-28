@@ -19,7 +19,9 @@ export default defineConfig({
     Components({
       dirs: ['src/components'],
       extensions: ['vue'],
-      include: ['/.vue$/', '/.vue?vue/'],
+      include: [/\.vue$/, /\.vue\?vue/],
+      // search for subdirectories
+      deep: true,
       dts: 'src/auto-components.js',
     }),
     Pages(),
