@@ -8,14 +8,22 @@
           alt=""
         />
       </div>
+      <h6 class="mb-0"></h6>
       <div class="mt-2 ms-2">
-        <h6 class="mb-0">Page Headers</h6>
-        <p class="text-secondary text-sm">10 Examples</p>
+        <h6 class="mb-0">{{ props.resource.name }}</h6>
+        <p class="text-secondary text-sm">{{ props.resource.subtitle }}</p>
       </div>
     </a>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+  const props = defineProps({
+    resource: {
+      type: Object,
+      default: () => ({}),
+    },
+  });
+</script>
 
 <style scoped></style>
