@@ -1,8 +1,13 @@
 <template>
   <Header />
-  <Category />
 </template>
 
-<script setup></script>
+<script setup>
+  import { useUserStore } from '@/stores/users.js';
+  const { postUserRequest } = useUserStore();
+  onMounted(() => {
+    postUserRequest();
+  });
+</script>
 
 <style scoped></style>

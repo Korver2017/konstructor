@@ -1,0 +1,17 @@
+[
+  {
+    "account": "admin@admin.com",
+    "role": "admin",
+    "name": "admin"
+  },
+  {
+    "account": "korver@konsturctor.com",
+    "role": "adimin",
+    "name": "Korver"
+  },
+  {
+    "account": "user@user.com",
+    "role": "user",
+    "name": "John Doe"
+  }
+]

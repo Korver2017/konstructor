@@ -2,7 +2,7 @@
   <div class="col-lg-9">
     <div class="row">
       <Resource
-        v-for="resource in resources"
+        v-for="resource in getResourceResult.resources"
         :key="resource.url"
         :resource="resource"
       />
@@ -14,8 +14,11 @@
 </template>
 
 <script setup>
-  import { useResourcesStore } from '@/stores/resources.js';
-  const { resources } = useResourcesStore();
+  import { useResourceStore } from '@/stores/resources.js';
+  const { getResourceRequest, getResourceResult } = useResourceStore();
+  onMounted(() => {
+    getResourceRequest();
+  });
 </script>
 
 <style scoped></style>
