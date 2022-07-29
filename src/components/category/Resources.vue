@@ -1,14 +1,14 @@
 <template>
   <div class="col-lg-9">
     <div class="row">
-      <Item
+      <Resource
         v-for="resource in resources"
         :key="resource.url"
         :resource="resource"
       />
     </div>
     <div class="row mt-3">
-      <Item />
+      <Resource />
     </div>
   </div>
 </template>

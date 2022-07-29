@@ -1,12 +1,8 @@
 <template>
-  <section class="my-5 py-5">
-    <div class="container mt-sm-5 mt-3">
-      <Block />
-    </div>
-    <div class="container mt-sm-5 mt-3">
-      <Block />
-    </div>
-  </section>
+  <div class="row">
+    <Description />
+    <Resources />
+  </div>
 </template>
 
 <script setup></script>
