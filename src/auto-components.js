@@ -7,17 +7,13 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    Block: typeof import('./components/category/Block.vue')['default']
     Category: typeof import('./components/Category.vue')['default']
     Description: typeof import('./components/category/Description.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
-    Item: typeof import('./components/category/Item.vue')['default']
-    Items: typeof import('./components/category/Items.vue')['default']
     Navbar: typeof import('./components/Navbar.vue')['default']
     Resource: typeof import('./components/category/Resource.vue')['default']
     Resources: typeof import('./components/category/Resources.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    Title: typeof import('./components/category/Title.vue')['default']
   }
 }
