@@ -4,9 +4,9 @@
 
 <script setup>
   import { useUserStore } from '@/stores/users.js';
-  const { postUserRequest } = useUserStore();
+  // const { postUserRequest } = useUserStore();
   onMounted(() => {
-    postUserRequest();
+    // postUserRequest();
   });
 </script>
 

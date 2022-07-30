@@ -21,6 +21,7 @@
                         class="form-control"
                         placeholder="Email"
                         aria-label="Email"
+                        v-model="userInputs.account"
                       />
                     </div>
                     <label>Password</label>
@@ -30,38 +31,19 @@
                         class="form-control"
                         placeholder="Password"
                         aria-label="Password"
+                        v-model="userInputs.password"
                       />
-                    </div>
-                    <div class="form-check form-switch">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="rememberMe"
-                        checked=""
-                      />
-                      <label class="form-check-label" for="rememberMe"
-                        >Remember me</label
-                      >
                     </div>
                     <div class="text-center">
                       <button
                         type="button"
                         class="btn bg-gradient-info w-100 mt-4 mb-0"
+                        @click="postUserRequest(userInputs)"
                       >
                         Sign in
                       </button>
                     </div>
                   </form>
-                </div>
-                <div class="card-footer text-center pt-0 px-lg-2 px-1">
-                  <p class="mb-4 text-sm mx-auto">
-                    Don't have an account?
-                    <a
-                      href="javascript:;"
-                      class="text-info text-gradient font-weight-bold"
-                      >Sign up</a
-                    >
-                  </p>
                 </div>
               </div>
             </div>
@@ -84,6 +66,9 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+  import { useUserStore } from '@/stores/users.js';
+  const { userInputs, postUserRequest } = useUserStore();
+</script>
 
 <style scoped></style>
