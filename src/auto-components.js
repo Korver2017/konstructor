@@ -7,22 +7,13 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    Block: typeof import('./components/category/Block.vue')['default']
     Category: typeof import('./components/Category.vue')['default']
+    Description: typeof import('./components/category/Description.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
-    HelloWorld: typeof import('./components/HelloWorld.vue')['default']
-    IconCommunity: typeof import('./components/icons/IconCommunity.vue')['default']
-    IconDocumentation: typeof import('./components/icons/IconDocumentation.vue')['default']
-    IconEcosystem: typeof import('./components/icons/IconEcosystem.vue')['default']
-    IconSupport: typeof import('./components/icons/IconSupport.vue')['default']
-    IconTooling: typeof import('./components/icons/IconTooling.vue')['default']
-    Item: typeof import('./components/category/Item.vue')['default']
-    Items: typeof import('./components/category/Items.vue')['default']
     Navbar: typeof import('./components/Navbar.vue')['default']
+    Resource: typeof import('./components/category/Resource.vue')['default']
+    Resources: typeof import('./components/category/Resources.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    TheWelcome: typeof import('./components/TheWelcome.vue')['default']
-    Title: typeof import('./components/category/Title.vue')['default']
-    WelcomeItem: typeof import('./components/WelcomeItem.vue')['default']
   }
 }

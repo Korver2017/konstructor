@@ -4,8 +4,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4 my-auto">
-            <h1 class="text-gradient text-warning mb-0">Your Desired</h1>
-            <h1 class="mb-4">Experiences</h1>
+            <h1 class="text-gradient text-warning mb-0">
+              Hello,
+              {{ postUserResult.user.name }}
+            </h1>
+            <h1 class="mb-4">Welcome back!</h1>
             <p class="lead">
               The time is now for it to be okay to be great. For being a bright
               color. For standing out.
@@ -72,6 +75,9 @@
   </header>
 </template>
 
-<script setup></script>
+<script setup>
+  import { useUserStore } from '@/stores/users.js';
+  const { postUserResult } = useUserStore();
+</script>
 
 <style scoped></style>

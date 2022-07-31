@@ -1,6 +1,6 @@
 <template>
   <div class="col-md-4 mt-md-0">
-    <a href="./sections/page-sections/hero-sections.html">
+    <a :href="props.resource.url" target="_blank">
       <div class="card shadow-lg move-on-hover min-height-160 min-height-160">
         <img
           class="w-100 my-auto"
@@ -8,14 +8,22 @@
           alt=""
         />
       </div>
+      <h6 class="mb-0"></h6>
       <div class="mt-2 ms-2">
-        <h6 class="mb-0">Page Headers</h6>
-        <p class="text-secondary text-sm">10 Examples</p>
+        <h6 class="mb-0">{{ props.resource.name }}</h6>
+        <p class="text-secondary text-sm">{{ props.resource.subtitle }}</p>
       </div>
     </a>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+  const props = defineProps({
+    resource: {
+      type: Object,
+      default: () => ({}),
+    },
+  });
+</script>
 
 <style scoped></style>
