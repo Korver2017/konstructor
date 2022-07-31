@@ -14,7 +14,7 @@ export default defineConfig({
     vue(),
     AutoImport({
       imports: ['vue', 'vue-router', 'pinia'],
-      dts: 'src/auto-imports.js',
+      // dts: 'src/auto-imports.js',
     }),
     Components({
       dirs: ['src/components'],
@@ -22,7 +22,7 @@ export default defineConfig({
       include: [/\.vue$/, /\.vue\?vue/],
       // search for subdirectories
       deep: true,
-      dts: 'src/auto-components.js',
+      // dts: 'src/auto-components.js',
     }),
     Pages(),
     Layouts(),

@@ -7,7 +7,6 @@ export const useResourceStore = defineStore('resources', () => {
 
   const getResourceRequest = async () => {
     const result = await apiGetResourceRequest();
-    console.log(result.data);
     getResourceResult.categories = result.data;
   };
 
