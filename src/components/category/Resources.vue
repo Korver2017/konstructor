@@ -1,23 +1,17 @@
 <template>
   <div class="col-lg-9">
-    <div class="row">
-      <Resource
-        v-for="resource in getResourceResult.resources"
-        :key="resource.url"
-        :resource="resource"
-      />
-    </div>
     <div class="row mt-3">
-      <Resource />
+      <Resource v-for="resource in props.resources" :resource="resource" />
     </div>
   </div>
 </template>
 
 <script setup>
-  import { useResourceStore } from '@/stores/resources.js';
-  const { getResourceRequest, getResourceResult } = useResourceStore();
-  onMounted(() => {
-    getResourceRequest();
+  const props = defineProps({
+    resources: {
+      type: Array,
+      default: () => [],
+    },
   });
 </script>
 

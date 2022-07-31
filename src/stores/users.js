@@ -7,7 +7,7 @@ export const useUserStore = defineStore('users', () => {
   const router = useRouter();
 
   const userInputs = reactive({
-    account: 'admin@admin.com',
+    account: 'korver@konsturctor.com',
     password: 'admin',
   });
 
@@ -20,6 +20,7 @@ export const useUserStore = defineStore('users', () => {
     )[0];
 
     postUserResult.user = userInfo;
+    postUserResult.user.auth = true;
     router.push('/');
   };
 

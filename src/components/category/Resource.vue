@@ -1,6 +1,6 @@
 <template>
   <div class="col-md-4 mt-md-0">
-    <a href="./sections/page-sections/hero-sections.html">
+    <a :href="props.resource.url" target="_blank">
       <div class="card shadow-lg move-on-hover min-height-160 min-height-160">
         <img
           class="w-100 my-auto"

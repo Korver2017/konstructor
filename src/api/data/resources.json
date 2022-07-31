@@ -1,7 +1,56 @@
-[
-  {
-    "name": "Eva Design System",
-    "subtitle": "Deep learning color generator",
-    "url": "https://colors.eva.design/"
-  }
-]
+{
+  "Color Tools": [
+    {
+      "name": "Eva Design System",
+      "subtitle": "Deep learning color generator",
+      "url": "https://colors.eva.design/",
+      "tags": ["Color Tool", "Semantic Color"]
+    },
+    {
+      "name": "couleur.io",
+      "subtitle": "a simple tool to help you create harmonizing color palettes.",
+      "url": "https://couleur.io/",
+      "tags": ["Color Tool"]
+    }
+  ],
+  "Icons": [
+    {
+      "name": "Icônes",
+      "subtitle": "",
+      "url": "https://icones.js.org/",
+      "tags": ["Icon"]
+    },
+    {
+      "name": "Tabler Icons",
+      "subtitle": "1424 Open source free SVG icons. Highly customizable. No attribution required. For commercial use.",
+      "url": "https://tablericons.com/",
+      "tags": ["Icon"]
+    },
+    {
+      "name": "Unicons",
+      "subtitle": "Over 4500+ icon fonts for Developers and designers to speedup production.",
+      "url": "https://iconscout.com/unicons",
+      "tags": ["Icon"]
+    },
+    {
+      "name": "Iconhub",
+      "subtitle": "Save your penny and time creating from scratch, use these diverse Icon set to complete your awesome design",
+      "url": "https://iconhub.io/",
+      "tags": ["Icon"]
+    },
+    {
+      "name": "IconPark",
+      "subtitle": "Abundant and colorful icon resource for free use",
+      "url": "https://iconpark.oceanengine.com/home",
+      "tags": ["Icon"]
+    }
+  ],
+  "Avatars": [
+    {
+      "name": "Boring Avatars",
+      "subtitle": "Avatar generator playground",
+      "url": "https://boringavatars.com/",
+      "tags": ["Avatar"]
+    }
+  ]
+}

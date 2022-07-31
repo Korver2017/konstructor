@@ -3,10 +3,12 @@ import { reactive } from 'vue';
 import { apiGetResourceRequest } from '@/api/index.js';
 
 export const useResourceStore = defineStore('resources', () => {
-  const getResourceResult = reactive({ resources: [] });
+  const getResourceResult = reactive({ categories: {} });
+
   const getResourceRequest = async () => {
     const result = await apiGetResourceRequest();
-    getResourceResult.resources = [...result.data];
+    console.log(result.data);
+    getResourceResult.categories = result.data;
   };
 
   return { getResourceRequest, getResourceResult };
