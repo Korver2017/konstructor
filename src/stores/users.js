@@ -1,13 +1,12 @@
 import { defineStore } from 'pinia';
 import { reactive } from 'vue';
-import { useRouter } from 'vue-router';
 import { apiPostUserRequest } from '@/api/index.js';
+import router from '@/router';
+import Cookies from 'js-cookie';
 
 export const useUserStore = defineStore('users', () => {
-  const router = useRouter();
-
   const userInputs = reactive({
-    account: 'korver@konsturctor.com',
+    account: 'korver@konstructor.com',
     password: 'admin',
   });
 
@@ -20,9 +19,16 @@ export const useUserStore = defineStore('users', () => {
     )[0];
 
     postUserResult.user = userInfo;
-    postUserResult.user.auth = true;
+    postUserResult.user.isAuthenticated = true;
+    Cookies.set('konstructor-token', 'konstructor-fake-token');
     router.push('/');
   };
 
-  return { userInputs, postUserRequest, postUserResult };
+  const logout = () => {
+    postUserResult.user = {};
+    Cookies.remove('konstructor-token');
+    router.push('/login');
+  };
+
+  return { userInputs, postUserRequest, postUserResult, logout };
 });
