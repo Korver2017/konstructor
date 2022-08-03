@@ -9,7 +9,8 @@
     "account": "korver@konstructor.com",
     "name": "Korver",
     "role": "admin",
-    "isAuthenticated": false
+    "isAuthenticated": false,
+    "favorite": [1, 2, 3]
   },
   {
     "account": "user@user.com",
