@@ -1,8 +1,11 @@
 <template>
-  <Navbar />
+  <Navbar v-if="userStore.postUserResult.user.isAuthenticated" />
   <router-view />
 </template>
 
-<script setup></script>
+<script setup>
+  import { useUserStore } from '@/stores/users.js';
+  const userStore = useUserStore();
+</script>
 
 <style scoped></style>

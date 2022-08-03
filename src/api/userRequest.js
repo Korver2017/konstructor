@@ -6,3 +6,5 @@ const userRequest = axios.create({
 
 export const postUserRequest = (userInputs) =>
   userRequest.post('/users.json', userInputs);
+
+export const getUserRequest = () => userRequest.get('/users.json');

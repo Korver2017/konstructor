@@ -68,7 +68,7 @@
 
 <script setup>
   import { useUserStore } from '@/stores/users.js';
-  const { userInputs, postUserRequest } = useUserStore();
+  const { userInputs, postUserRequest, getUserRequest } = useUserStore();
 </script>
 
 <style scoped></style>

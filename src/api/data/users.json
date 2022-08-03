@@ -1,17 +1,21 @@
 [
   {
     "account": "admin@admin.com",
+    "name": "admin",
     "role": "admin",
-    "name": "admin"
+    "isAuthenticated": false
   },
   {
-    "account": "korver@konsturctor.com",
+    "account": "korver@konstructor.com",
+    "name": "Korver",
     "role": "admin",
-    "name": "Korver"
+    "isAuthenticated": false,
+    "favorite": [1, 2, 3]
   },
   {
     "account": "user@user.com",
+    "name": "John Doe",
     "role": "user",
-    "name": "John Doe"
+    "isAuthenticated": false
   }
 ]

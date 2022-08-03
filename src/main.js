@@ -1,4 +1,4 @@
-import { createApp } from 'vue';
+import { createApp, markRaw } from 'vue';
 import { createPinia } from 'pinia';
 
 import App from './App.vue';
@@ -11,9 +11,9 @@ import '@/assets/css/nucleo-svg.css';
 // CSS Styles
 import '@/assets/scss/soft-design-system-pro.scss';
 
+const pinia = createPinia();
 const app = createApp(App);
-
-app.use(createPinia());
+app.use(pinia);
 app.use(router);
 
 app.mount('#app');
