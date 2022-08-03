@@ -11,8 +11,9 @@
             {{ props.resource.name }}
           </h6>
           <i
-            @click.prevent.stop="changeColor"
+            @click.prevent.stop="toggleAsFavorite"
             class="col-md-2 fas fa-heart text-secondary align-items-center d-flex"
+            :class="{ 'text-danger': isFavorite }"
           ></i>
         </div>
         <p class="text-secondary text-sm">{{ props.resource.subtitle }}</p>
@@ -23,7 +24,6 @@
 
 <script setup>
   import { useUserStore } from '@/stores/users';
-
   const userStore = useUserStore();
   const props = defineProps({
     resource: {
@@ -32,20 +32,23 @@
     },
   });
 
-  console.log(userStore.postUserResult.user.favorite);
-
-  const isFavorite = computed(() => {
-    userStore.postUserResult.user.favorite;
-  });
-
   const image = computed(() => {
     return props.resource.image
       ? props.resource.image
       : 'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/presentation/sections/page-sections/page-headers/header-7.jpg';
   });
 
-  const changeColor = () => {
-    console.log('K');
+  const isFavorite = computed(() => {
+    return userStore.postUserResult.user.favorites.includes(props.resource.id);
+  });
+
+  const toggleAsFavorite = () => {
+    const favorites = userStore.postUserResult.user.favorites;
+    const idx = favorites.indexOf(props.resource.id);
+
+    if (idx > -1) return favorites.splice(idx, 1);
+
+    favorites.push(props.resource.id);
   };
 </script>
 

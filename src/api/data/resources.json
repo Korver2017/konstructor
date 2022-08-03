@@ -35,6 +35,7 @@
       "tags": ["Icon"]
     },
     {
+      "id": 5,
       "name": "Unicons",
       "subtitle": "Over 4500+ icon fonts for Developers and designers to speedup production.",
       "url": "https://iconscout.com/unicons",
@@ -42,6 +43,7 @@
       "tags": ["Icon"]
     },
     {
+      "id": 6,
       "name": "Iconhub",
       "subtitle": "Save your penny and time creating from scratch, use these diverse Icon set to complete your awesome design",
       "url": "https://iconhub.io/",
@@ -49,6 +51,7 @@
       "tags": ["Icon"]
     },
     {
+      "id": 7,
       "name": "IconPark",
       "subtitle": "Abundant and colorful icon resource for free use",
       "url": "https://iconpark.oceanengine.com/home",
@@ -58,6 +61,7 @@
   ],
   "Avatars": [
     {
+      "id": 8,
       "name": "Boring Avatars",
       "subtitle": "Avatar generator playground",
       "url": "https://boringavatars.com/",
