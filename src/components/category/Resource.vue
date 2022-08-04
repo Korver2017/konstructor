@@ -1,6 +1,11 @@
 <template>
   <div class="col-md-4 mt-md-0">
-    <a :href="props.resource.url" target="_blank">
+    <!-- <a :href="props.resource.url" target="_blank"> -->
+    <router-link
+      :to="{
+        path: `/resources/resource/${props.resource.id}`,
+      }"
+    >
       <div class="card shadow-lg move-on-hover min-height-160 min-height-160">
         <img class="w-100 my-auto" :src="image" alt="" />
       </div>
@@ -18,7 +23,7 @@
         </div>
         <p class="text-secondary text-sm">{{ props.resource.subtitle }}</p>
       </div>
-    </a>
+    </router-link>
   </div>
 </template>
 
