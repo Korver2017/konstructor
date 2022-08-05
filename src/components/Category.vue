@@ -1,5 +1,9 @@
 <template>
-  <div v-for="(val, key, idx) in getResourceResult.categories" class="row">
+  <div
+    v-for="(val, key, idx) in getResourceResult.categories"
+    :key="idx"
+    class="row"
+  >
     <Description :label="key" />
     <Resources :resources="val" />
   </div>
