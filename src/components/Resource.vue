@@ -1,9 +1,8 @@
 <template>
   <div class="col-md-4 mt-md-0">
-    <!-- <a :href="props.resource.url" target="_blank"> -->
     <router-link
       :to="{
-        path: `/resources/resource/${props.resource.id}`,
+        path: `/tools/resource/${props.resource.id}`,
       }"
     >
       <div class="card shadow-lg move-on-hover min-height-160 min-height-160">

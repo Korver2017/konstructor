@@ -53,7 +53,7 @@
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Resources
+                    Tools
                     <img
                       src="@/assets/img/down-arrow-dark.svg"
                       alt="down-arrow"
@@ -70,7 +70,7 @@
                           v-for="category in categories"
                           :key="category.id"
                           class="dropdown-item border-radius-md"
-                          :to="`/resources/${category.id}`"
+                          :to="`/tools`"
                           ><span>{{ category.name }}</span>
                         </router-link>
                       </div>
