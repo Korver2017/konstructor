@@ -1,9 +1,5 @@
 <template>
-  <div
-    v-for="(resources, key, idx) in getResourceResult.categories"
-    :key="idx"
-    class="row"
-  >
+  <div v-for="(resources, key, idx) in props.category" :key="idx" class="row">
     <div class="col-lg-3">
       <div
         class="position-sticky pb-lg-5 pb-3 mt-lg-0 mt-5 ps-2"
@@ -11,7 +7,7 @@
       >
         <h3>{{ key }}</h3>
         <h6 class="text-secondary font-weight-normal pe-3">
-          A selection of 45 page sections that fit perfectly in any combination
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
         </h6>
       </div>
     </div>
@@ -28,8 +24,12 @@
 </template>
 
 <script setup>
-  import { useResourceStore } from '@/stores/resources.js';
-  const { getResourceResult } = useResourceStore();
+  const props = defineProps({
+    category: {
+      type: Object,
+      default: () => ({}),
+    },
+  });
 </script>
 
 <style scoped></style>

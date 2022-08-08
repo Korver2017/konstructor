@@ -69,15 +69,15 @@
                         <router-link
                           v-for="category in categories"
                           :key="category.id"
+                          :to="`/tools/${category.id}`"
                           class="dropdown-item border-radius-md"
-                          :to="`/tools`"
                           ><span>{{ category.name }}</span>
                         </router-link>
                       </div>
                     </div>
                     <div class="d-lg-none">
                       <div
-                        class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center px-0"
+                        class="dropdown-header text-dark font-weight-bolder d-flex justify-content-center align-items-center px-0"
                       >
                         <div class="d-inline-block">
                           <div
