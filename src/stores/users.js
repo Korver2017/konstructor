@@ -27,14 +27,11 @@ export const useUserStore = defineStore('users', () => {
   const getUserRequest = async () => {
     const token = Cookies.get('konstructor-token');
     const account = token.split('-')[0];
-    console.log(account);
     const result = await apiGetUserRequest();
-    console.log(result.data);
     postUserResult.user = result.data.filter(
       (user) => user.account === account
     )[0];
     postUserResult.user.isAuthenticated = true;
-    console.log(postUserResult);
   };
 
   const logout = () => {

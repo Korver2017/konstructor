@@ -14,9 +14,6 @@ router.beforeEach(async (to, from, next) => {
   const userStore = useUserStore();
   const cookie = Cookies.get('konstructor-token');
 
-  console.log(cookie);
-  console.log(to.name);
-
   if (
     cookie === 'korver@konstructor.com-fake-token' &&
     !userStore.postUserResult.user.isAuthenticated
