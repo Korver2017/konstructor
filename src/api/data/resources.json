@@ -1,72 +1,81 @@
 {
-  "color-tools": [
-    {
-      "id": 1,
-      "name": "Eva Design System",
-      "subtitle": "Deep learning color generator",
-      "url": "https://colors.eva.design/",
-      "image": "https://boringavatars.com/boring-avatars.jpg",
-      "tags": ["Color Tool", "Semantic Color"]
-    },
-    {
-      "id": 2,
-      "name": "couleur.io",
-      "subtitle": "a simple tool to help you create harmonizing color palettes.",
-      "url": "https://couleur.io/",
-      "image": "https://couleur.io/images/cover.png",
-      "tags": ["Color Tool"]
-    }
-  ],
-  "icons": [
-    {
-      "id": 3,
-      "name": "Icônes",
-      "subtitle": "",
-      "url": "https://icones.js.org/",
-      "image": "",
-      "tags": ["Icon"]
-    },
-    {
-      "id": 4,
-      "name": "Tabler Icons",
-      "subtitle": "1424 Open source free SVG icons. Highly customizable. No attribution required. For commercial use.",
-      "url": "https://tablericons.com/",
-      "image": "https://tablericons.com/tablericons_og.png",
-      "tags": ["Icon"]
-    },
-    {
-      "id": 5,
-      "name": "Unicons",
-      "subtitle": "Over 4500+ icon fonts for Developers and designers to speedup production.",
-      "url": "https://iconscout.com/unicons",
-      "image": "https://iconscout.com/og/unicons.png",
-      "tags": ["Icon"]
-    },
-    {
-      "id": 6,
-      "name": "Iconhub",
-      "subtitle": "Save your penny and time creating from scratch, use these diverse Icon set to complete your awesome design",
-      "url": "https://iconhub.io/",
-      "image": "https://iconhub.io/img/hero.jpeg",
-      "tags": ["Icon"]
-    },
-    {
-      "id": 7,
-      "name": "IconPark",
-      "subtitle": "Abundant and colorful icon resource for free use",
-      "url": "https://iconpark.oceanengine.com/home",
-      "image": "",
-      "tags": ["Icon"]
-    }
-  ],
-  "avatars": [
-    {
-      "id": 8,
-      "name": "Boring Avatars",
-      "subtitle": "Avatar generator playground",
-      "url": "https://boringavatars.com/",
-      "image": "https://boringavatars.com/boring-avatars.jpg",
-      "tags": ["Avatar"]
-    }
-  ]
+  "color-tools": {
+    "title": "Color Tools",
+    "resources": [
+      {
+        "id": 1,
+        "name": "Eva Design System",
+        "subtitle": "Deep learning color generator",
+        "url": "https://colors.eva.design/",
+        "image": "https://boringavatars.com/boring-avatars.jpg",
+        "tags": ["Color Tool", "Semantic Color"]
+      },
+      {
+        "id": 2,
+        "name": "couleur.io",
+        "subtitle": "a simple tool to help you create harmonizing color palettes.",
+        "url": "https://couleur.io/",
+        "image": "https://couleur.io/images/cover.png",
+        "tags": ["Color Tool"]
+      }
+    ]
+  },
+  "icons": {
+    "title": "Icons",
+    "resources": [
+      {
+        "id": 3,
+        "name": "Icônes",
+        "subtitle": "",
+        "url": "https://icones.js.org/",
+        "image": "",
+        "tags": ["Icon"]
+      },
+      {
+        "id": 4,
+        "name": "Tabler Icons",
+        "subtitle": "1424 Open source free SVG icons. Highly customizable. No attribution required. For commercial use.",
+        "url": "https://tablericons.com/",
+        "image": "https://tablericons.com/tablericons_og.png",
+        "tags": ["Icon"]
+      },
+      {
+        "id": 5,
+        "name": "Unicons",
+        "subtitle": "Over 4500+ icon fonts for Developers and designers to speedup production.",
+        "url": "https://iconscout.com/unicons",
+        "image": "https://iconscout.com/og/unicons.png",
+        "tags": ["Icon"]
+      },
+      {
+        "id": 6,
+        "name": "Iconhub",
+        "subtitle": "Save your penny and time creating from scratch, use these diverse Icon set to complete your awesome design",
+        "url": "https://iconhub.io/",
+        "image": "https://iconhub.io/img/hero.jpeg",
+        "tags": ["Icon"]
+      },
+      {
+        "id": 7,
+        "name": "IconPark",
+        "subtitle": "Abundant and colorful icon resource for free use",
+        "url": "https://iconpark.oceanengine.com/home",
+        "image": "",
+        "tags": ["Icon"]
+      }
+    ]
+  },
+  "avatars": {
+    "title": "Avatars",
+    "resources": [
+      {
+        "id": 8,
+        "name": "Boring Avatars",
+        "subtitle": "Avatar generator playground",
+        "url": "https://boringavatars.com/",
+        "image": "https://boringavatars.com/boring-avatars.jpg",
+        "tags": ["Avatar"]
+      }
+    ]
+  }
 }

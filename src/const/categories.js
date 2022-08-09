@@ -1,6 +1,6 @@
 export const categories = [
-  { id: 'all', name: 'All' },
-  { id: 2, name: 'Color Tools' },
-  { id: 3, name: 'Icons' },
-  { id: 4, name: 'Avatars' },
+  { id: 1, name: 'all', title: 'All' },
+  { id: 2, name: 'color-tools', title: 'Color Tools' },
+  { id: 3, name: 'icons', title: 'Icons' },
+  { id: 4, name: 'avatars', title: 'Avatars' },
 ];

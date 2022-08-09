@@ -68,10 +68,10 @@
                       <div class="col-12 px-4 py-2">
                         <router-link
                           v-for="category in categories"
-                          :key="category.id"
-                          :to="`/tools/${category.id}`"
+                          :key="category.name"
+                          :to="`/tools/${category.name}`"
                           class="dropdown-item border-radius-md"
-                          ><span>{{ category.name }}</span>
+                          ><span>{{ category.title }}</span>
                         </router-link>
                       </div>
                     </div>
