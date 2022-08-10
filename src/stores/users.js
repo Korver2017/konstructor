@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { reactive } from 'vue';
-import { apiPostUserRequest, apiGetUserRequest } from '@/api/index.js';
+import { apiLogin, apiGetUsers } from '@/api/usersLoader';
 import router from '@/router';
 import Cookies from 'js-cookie';
 
@@ -10,42 +10,40 @@ export const useUserStore = defineStore('users', () => {
     password: 'admin',
   });
 
-  const postUserResult = reactive({ user: {} });
+  const user = reactive({ account: {}, isAuthenticated: false });
 
-  const postUserRequest = async () => {
-    const result = await apiPostUserRequest(userInputs);
-    const userInfo = result.data.filter(
+  const login = async () => {
+    const result = await apiLogin(userInputs);
+    const account = result.data.filter(
       (user) => user.account === userInputs.account
     )[0];
 
-    postUserResult.user = userInfo;
-    postUserResult.user.isAuthenticated = true;
+    user.account = account;
+    user.isAuthenticated = true;
     Cookies.set('konstructor-token', `${userInputs.account}-fake-token`);
     router.push('/');
   };
 
-  const getUserRequest = async () => {
+  const getUser = async () => {
     const token = Cookies.get('konstructor-token');
     const account = token.split('-')[0];
-    const result = await apiGetUserRequest();
-    postUserResult.user = result.data.filter(
-      (user) => user.account === account
-    )[0];
-    postUserResult.user.isAuthenticated = true;
+    const result = await apiGetUsers();
+    user.account = result.data.filter((user) => user.account === account)[0];
+    user.isAuthenticated = true;
   };
 
   const logout = () => {
-    postUserResult.user = {};
-    postUserResult.user.isAuthenticated = false;
+    user.account = {};
+    user.isAuthenticated = false;
     Cookies.remove('konstructor-token');
     router.push('/login');
   };
 
   return {
     userInputs,
-    postUserRequest,
-    postUserResult,
-    getUserRequest,
+    login,
+    user,
+    getUser,
     logout,
   };
 });

@@ -1,5 +1,5 @@
 <template>
-  <Navbar v-if="userStore.postUserResult.user.isAuthenticated" />
+  <Navbar v-if="userStore.user.isAuthenticated" />
   <router-view />
 </template>
 

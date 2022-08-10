@@ -38,7 +38,7 @@
                       <button
                         type="button"
                         class="btn bg-gradient-info w-100 mt-4 mb-0"
-                        @click="postUserRequest(userInputs)"
+                        @click="login(userInputs)"
                       >
                         Sign in
                       </button>
@@ -68,7 +68,7 @@
 
 <script setup>
   import { useUserStore } from '@/stores/users.js';
-  const { userInputs, postUserRequest, getUserRequest } = useUserStore();
+  const { userInputs, login } = useUserStore();
 </script>
 
 <style scoped></style>

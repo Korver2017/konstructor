@@ -16,19 +16,19 @@ router.beforeEach(async (to, from, next) => {
 
   if (
     cookie === 'korver@konstructor.com-fake-token' &&
-    !userStore.postUserResult.user.isAuthenticated
+    !userStore.user.isAuthenticated
   ) {
-    await userStore.postUserRequest();
+    await userStore.getUser();
   }
 
-  if (!cookie && !userStore.postUserResult.user.isAuthenticated) {
+  if (!cookie && !userStore.user.isAuthenticated) {
     // await userStore.logout();
     if (from.name === 'login') {
       next();
     }
   }
 
-  if (to.name !== 'login' && !userStore.postUserResult.user.isAuthenticated)
+  if (to.name !== 'login' && !userStore.user.isAuthenticated)
     next({ name: 'login' });
   else next();
 });

@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { reactive } from 'vue';
-import { apiGetResourceRequest } from '@/api/index.js';
+// import { apiGetResourceRequest } from '@/api/index.js';
 
 export const useResourceStore = defineStore('resources', () => {
   const getResourceResult = reactive({ categories: {} });

@@ -6,7 +6,7 @@
           <div class="col-lg-4 my-auto">
             <h1 class="text-gradient text-warning mb-0">
               Hello,
-              {{ postUserResult.user.name }}
+              {{ user.account.name }}
             </h1>
             <h1 class="mb-4">Welcome back!</h1>
             <p class="lead">
@@ -77,7 +77,7 @@
 
 <script setup>
   import { useUserStore } from '@/stores/users.js';
-  const { postUserResult } = useUserStore();
+  const { user } = useUserStore();
 </script>
 
 <style scoped></style>
