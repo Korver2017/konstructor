@@ -3,11 +3,11 @@
 </template>
 
 <script setup>
-  import { useResourceStore } from '@/stores/resources.js';
-  const { getResourceRequest } = useResourceStore();
+  import { useToolStore } from '@/stores/tools';
+  const { getTools } = useToolStore();
 
   onMounted(() => {
-    getResourceRequest();
+    getTools();
   });
 </script>
 

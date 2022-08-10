@@ -7,13 +7,13 @@
 </template>
 
 <script setup>
-  import { useResourceStore } from '@/stores/resources.js';
-  const { getResourceResult } = useResourceStore();
+  import { useResourceStore } from '@/stores/tools';
+  const { tools } = useResourceStore();
   const route = useRoute();
 
   const category = computed(() => {
     const id = route.params.id;
-    return getResourceResult.categories[id];
+    return tools.categories[id];
   });
 </script>
 

@@ -4,4 +4,4 @@ const toolsLoader = axios.create({
   baseURL: '/src/api/data',
 });
 
-export const getTools = () => toolsLoader.get('/tools.json');
+export const apiGetTools = () => toolsLoader.get('/tools.json');
