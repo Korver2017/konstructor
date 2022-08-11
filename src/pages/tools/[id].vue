@@ -1,19 +1,31 @@
 <template>
   <section class="my-5 py-5">
     <div class="container mt-sm-5 mt-3">
-      <Category :category="category" />
+      <template v-if="isLoaded">
+        <Category :category="category" />
+      </template>
     </div>
   </section>
 </template>
 
 <script setup>
-  import { useResourceStore } from '@/stores/tools';
-  const { tools } = useResourceStore();
+  import { apiGetTool } from '@/api/toolsLoader';
+  import { useToolStore } from '@/stores/tools';
+  const { tools } = useToolStore();
   const route = useRoute();
 
-  const category = computed(() => {
-    const id = route.params.id;
-    return tools.categories[id];
+  const category = { data: {} };
+
+  const id = computed(() => {
+    return route.params.id;
+  });
+
+  const isLoaded = ref(false);
+
+  onMounted(async () => {
+    const result = await apiGetTool(id.value);
+    await Object.assign(category.data, result.data);
+    isLoaded.value = true;
   });
 </script>
 

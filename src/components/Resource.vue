@@ -39,11 +39,11 @@
   });
 
   const isFavorite = computed(() => {
-    return userStore.postUserResult.user.favorites.includes(props.resource.id);
+    return userStore.user.data.favorites.includes(props.resource.id);
   });
 
   const toggleAsFavorite = () => {
-    const favorites = userStore.postUserResult.user.favorites;
+    const favorites = userStore.user.data.favorites;
     const idx = favorites.indexOf(props.resource.id);
 
     if (idx > -1) return favorites.splice(idx, 1);

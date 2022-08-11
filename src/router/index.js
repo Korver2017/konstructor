@@ -12,23 +12,26 @@ const router = createRouter({
 
 router.beforeEach(async (to, from, next) => {
   const userStore = useUserStore();
+  console.log(userStore.user.data.isAuthenticated);
+
+  // const isAuthenticated = console.log(user.data);
   const cookie = Cookies.get('konstructor-token');
 
   if (
     cookie === 'korver@konstructor.com-fake-token' &&
-    !userStore.user.isAuthenticated
+    !userStore.user.data.isAuthenticated
   ) {
     await userStore.getUser();
   }
 
-  if (!cookie && !userStore.user.isAuthenticated) {
+  if (!cookie && !userStore.user.data.isAuthenticated) {
     // await userStore.logout();
     if (from.name === 'login') {
       next();
     }
   }
 
-  if (to.name !== 'login' && !userStore.user.isAuthenticated)
+  if (to.name !== 'login' && !userStore.user.data.isAuthenticated)
     next({ name: 'login' });
   else next();
 });

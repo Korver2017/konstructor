@@ -5,3 +5,4 @@ const toolsLoader = axios.create({
 });
 
 export const apiGetTools = () => toolsLoader.get('/tools.json');
+export const apiGetTool = (url) => toolsLoader.get(`/tools/${url}.json`);

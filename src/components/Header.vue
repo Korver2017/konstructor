@@ -6,7 +6,7 @@
           <div class="col-lg-4 my-auto">
             <h1 class="text-gradient text-warning mb-0">
               Hello,
-              {{ user.account.name }}
+              {{ user.data.name }}
             </h1>
             <h1 class="mb-4">Welcome back!</h1>
             <p class="lead">

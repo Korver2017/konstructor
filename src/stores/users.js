@@ -10,16 +10,15 @@ export const useUserStore = defineStore('users', () => {
     password: 'admin',
   });
 
-  const user = reactive({ account: {}, isAuthenticated: false });
+  const user = reactive({ data: {} });
 
   const login = async () => {
     const result = await apiLogin(userInputs);
-    const account = result.data.filter(
+    const matched = result.data.find(
       (user) => user.account === userInputs.account
-    )[0];
+    );
 
-    user.account = account;
-    user.isAuthenticated = true;
+    user.data = matched;
     Cookies.set('konstructor-token', `${userInputs.account}-fake-token`);
     router.push('/');
   };
@@ -28,13 +27,11 @@ export const useUserStore = defineStore('users', () => {
     const token = Cookies.get('konstructor-token');
     const account = token.split('-')[0];
     const result = await apiGetUsers();
-    user.account = result.data.filter((user) => user.account === account)[0];
-    user.isAuthenticated = true;
+    user.data = result.data.find((user) => user.account === account);
   };
 
   const logout = () => {
-    user.account = {};
-    user.isAuthenticated = false;
+    user.data = {};
     Cookies.remove('konstructor-token');
     router.push('/login');
   };

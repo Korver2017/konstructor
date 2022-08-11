@@ -3,21 +3,21 @@
     "account": "admin@admin.com",
     "name": "admin",
     "role": "admin",
-    "isAuthenticated": false,
+    "isAuthenticated": true,
     "favorites": []
   },
   {
     "account": "korver@konstructor.com",
     "name": "Korver",
     "role": "admin",
-    "isAuthenticated": false,
+    "isAuthenticated": true,
     "favorites": [1, 2, 3]
   },
   {
     "account": "user@user.com",
     "name": "John Doe",
     "role": "user",
-    "isAuthenticated": false,
+    "isAuthenticated": true,
     "favorites": []
   }
 ]
