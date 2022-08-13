@@ -5,4 +5,8 @@ export const tools = [
   { name: 'avatars', title: 'Avatars' },
 ];
 
-export const packages = [{ name: 'all', title: 'All' }];
+export const packages = [
+  { name: 'all', title: 'All' },
+  { name: 'animations', title: 'Animations' },
+  { name: 'frameworks', title: 'Frameworks' },
+];

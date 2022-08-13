@@ -11,7 +11,7 @@
     "name": "Korver",
     "role": "admin",
     "isAuthenticated": true,
-    "favorites": [1, 2, 3]
+    "favorites": ["color-tools-1", "icons-1", "icons-2", "icons-5", "animations-1", "frameworks-1"]
   },
   {
     "account": "user@user.com",

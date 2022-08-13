@@ -3,7 +3,7 @@
     "title": "Icons",
     "resources": [
       {
-        "id": 3,
+        "id": "icons-1",
         "name": "Icônes",
         "subtitle": "",
         "url": "https://icones.js.org/",
@@ -11,7 +11,7 @@
         "tags": ["Icon"]
       },
       {
-        "id": 4,
+        "id": "icons-2",
         "name": "Tabler Icons",
         "subtitle": "1424 Open source free SVG icons. Highly customizable. No attribution required. For commercial use.",
         "url": "https://tablericons.com/",
@@ -19,7 +19,7 @@
         "tags": ["Icon"]
       },
       {
-        "id": 5,
+        "id": "icons-3",
         "name": "Unicons",
         "subtitle": "Over 4500+ icon fonts for Developers and designers to speedup production.",
         "url": "https://iconscout.com/unicons",
@@ -27,7 +27,7 @@
         "tags": ["Icon"]
       },
       {
-        "id": 6,
+        "id": "icons-4",
         "name": "Iconhub",
         "subtitle": "Save your penny and time creating from scratch, use these diverse Icon set to complete your awesome design",
         "url": "https://iconhub.io/",
@@ -35,7 +35,7 @@
         "tags": ["Icon"]
       },
       {
-        "id": 7,
+        "id": "icons-5",
         "name": "IconPark",
         "subtitle": "Abundant and colorful icon resource for free use",
         "url": "https://iconpark.oceanengine.com/home",
