@@ -12,9 +12,7 @@ const router = createRouter({
 
 router.beforeEach(async (to, from, next) => {
   const userStore = useUserStore();
-  console.log(userStore.user.data.isAuthenticated);
 
-  // const isAuthenticated = console.log(user.data);
   const cookie = Cookies.get('konstructor-token');
 
   if (
