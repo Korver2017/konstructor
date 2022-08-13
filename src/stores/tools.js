@@ -1,6 +1,9 @@
 import { defineStore } from 'pinia';
 import { reactive } from 'vue';
+import { useRoute } from 'vue-router';
 import { apiGetTools } from '@/api/toolsLoader';
+import { apiGetTool } from '@/api/toolsLoader';
+import { tools as menu } from '@/const/menus';
 
 export const useToolStore = defineStore('tools', () => {
   const tools = reactive({ categories: {} });
@@ -10,5 +13,20 @@ export const useToolStore = defineStore('tools', () => {
     tools.categories = result.data;
   };
 
-  return { getTools, tools };
+  const menuItems = menu.map((item) => item.name);
+  const route = useRoute();
+  const id = computed(() => route.params.id);
+  const category = reactive({ data: {} });
+
+  const watchCategoryChanged = () =>
+    watchEffect(async () => {
+      category.data = {};
+
+      if (menuItems.indexOf(id.value) < 0) return;
+
+      const result = await apiGetTool(id.value);
+      category.data = result.data;
+    });
+
+  return { getTools, tools, watchCategoryChanged, category };
 });

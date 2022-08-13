@@ -1,9 +1,9 @@
 {
   "avatars": {
-    "category": "Avatars",
+    "title": "Avatars",
     "resources": [
       {
-        "id": 8,
+        "id": "avatars-1",
         "name": "Boring Avatars",
         "subtitle": "Avatar generator playground",
         "url": "https://boringavatars.com/",

@@ -1,9 +1,9 @@
 {
   "color-tools": {
-    "category": "Color Tools",
+    "title": "Color Tools",
     "resources": [
       {
-        "id": 1,
+        "id": "color-tools-1",
         "name": "Eva Design System",
         "subtitle": "Deep learning color generator",
         "url": "https://colors.eva.design/",
@@ -11,7 +11,7 @@
         "tags": ["Color Tool", "Semantic Color"]
       },
       {
-        "id": 2,
+        "id": "color-tools-2",
         "name": "couleur.io",
         "subtitle": "a simple tool to help you create harmonizing color palettes.",
         "url": "https://couleur.io/",
