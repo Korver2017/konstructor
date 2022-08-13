@@ -5,8 +5,7 @@
         <div class="row">
           <div class="col-lg-4 my-auto">
             <h1 class="text-gradient text-warning mb-0">
-              Hello,
-              {{ user.data.name }}
+              {{ greeting }}
             </h1>
             <h1 class="mb-4">Welcome back!</h1>
             <p class="lead">
@@ -76,8 +75,20 @@
 </template>
 
 <script setup>
-  import { useUserStore } from '@/stores/users.js';
-  const { user } = useUserStore();
+  import { useUserStore } from '@/stores/users';
+  const useStore = useUserStore();
+  const greetTexts = ['Hello', 'Hi', 'Hey'];
+  const greeting = ref('');
+
+  const greet = () => {
+    const num = Math.floor(Math.random() * 10);
+    const result = num % 3;
+    greeting.value = `${greetTexts[result]}, ${useStore.user.data.name}`;
+  };
+
+  onMounted(() => {
+    greet();
+  });
 </script>
 
 <style scoped></style>
