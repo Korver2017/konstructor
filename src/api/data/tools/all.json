@@ -1,4 +1,25 @@
 {
+  "color-tools": {
+    "title": "Color Tools",
+    "resources": [
+      {
+        "id": 1,
+        "name": "Eva Design System",
+        "subtitle": "Deep learning color generator",
+        "url": "https://colors.eva.design/",
+        "image": "https://boringavatars.com/boring-avatars.jpg",
+        "tags": ["Color Tool", "Semantic Color"]
+      },
+      {
+        "id": 2,
+        "name": "couleur.io",
+        "subtitle": "a simple tool to help you create harmonizing color palettes.",
+        "url": "https://couleur.io/",
+        "image": "https://couleur.io/images/cover.png",
+        "tags": ["Color Tool"]
+      }
+    ]
+  },
   "icons": {
     "title": "Icons",
     "resources": [
@@ -41,6 +62,19 @@
         "url": "https://iconpark.oceanengine.com/home",
         "image": "",
         "tags": ["Icon"]
+      }
+    ]
+  },
+  "avatars": {
+    "title": "Avatars",
+    "resources": [
+      {
+        "id": 8,
+        "name": "Boring Avatars",
+        "subtitle": "Avatar generator playground",
+        "url": "https://boringavatars.com/",
+        "image": "https://boringavatars.com/boring-avatars.jpg",
+        "tags": ["Avatar"]
       }
     ]
   }
