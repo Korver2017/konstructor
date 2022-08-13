@@ -3,10 +3,11 @@
 </template>
 
 <script setup>
-  import { useUserStore } from '@/stores/users.js';
-  // const { postUserRequest } = useUserStore();
+  import { useToolStore } from '@/stores/tools';
+  const { getTools } = useToolStore();
+
   onMounted(() => {
-    // postUserRequest();
+    getTools();
   });
 </script>
 

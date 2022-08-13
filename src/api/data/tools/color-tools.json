@@ -1,0 +1,23 @@
+{
+  "color-tools": {
+    "category": "Color Tools",
+    "resources": [
+      {
+        "id": 1,
+        "name": "Eva Design System",
+        "subtitle": "Deep learning color generator",
+        "url": "https://colors.eva.design/",
+        "image": "https://boringavatars.com/boring-avatars.jpg",
+        "tags": ["Color Tool", "Semantic Color"]
+      },
+      {
+        "id": 2,
+        "name": "couleur.io",
+        "subtitle": "a simple tool to help you create harmonizing color palettes.",
+        "url": "https://couleur.io/",
+        "image": "https://couleur.io/images/cover.png",
+        "tags": ["Color Tool"]
+      }
+    ]
+  }
+}
