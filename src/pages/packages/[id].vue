@@ -7,8 +7,8 @@
 </template>
 
 <script setup>
-  import { useToolStore } from '@/stores/tools';
-  const { watchCategoryChanged, category } = useToolStore();
+  import { usePackageStore } from '@/stores/packages';
+  const { watchCategoryChanged, category } = usePackageStore();
 
   watchCategoryChanged();
 </script>
