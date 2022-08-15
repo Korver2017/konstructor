@@ -15,7 +15,7 @@ export const useToolStore = defineStore('tools', () => {
 
   const menuItems = menu.map((item) => item.name);
   const route = useRoute();
-  const id = computed(() => route.params.id);
+  const tool = computed(() => route.params.tool);
   const category = reactive({ data: {} });
 
   // Watch for router changes and update category data.
@@ -24,9 +24,9 @@ export const useToolStore = defineStore('tools', () => {
       category.data = {};
 
       // When leaving the page or route is not match to any menu item, return.
-      if (menuItems.indexOf(id.value) < 0) return;
+      if (menuItems.indexOf(tool.value) < 0) return;
 
-      const result = await apiGetTool(id.value);
+      const result = await apiGetTool(tool.value);
       category.data = result.data;
     });
 

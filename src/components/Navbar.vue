@@ -115,7 +115,7 @@
                   id="dropdownMenuDocs"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  @click="userStore.logout"
+                  @click="logout"
                 >
                   Logout
                 </a>
@@ -133,6 +133,7 @@
   import { tools, packages } from '@/const/menus';
   import { useUserStore } from '@/stores/users';
   const userStore = useUserStore();
+  const { logout } = userStore;
 </script>
 
 <style scoped></style>
