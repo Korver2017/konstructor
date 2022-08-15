@@ -8,7 +8,8 @@
 
 <script setup>
   import { useToolStore } from '@/stores/tools';
-  const { watchCategoryChanged, category } = useToolStore();
+  const toolStore = useToolStore();
+  const { watchCategoryChanged, category } = toolStore;
 
   watchCategoryChanged();
 </script>
