@@ -5,8 +5,10 @@
         <div class="row">
           <div class="col-lg-4 my-auto">
             <h1 class="text-gradient text-warning mb-0">
-              Hello,
-              {{ user.data.name }}
+              {{ time }}
+            </h1>
+            <h1 class="text-gradient text-warning mb-0">
+              {{ greeting }}
             </h1>
             <h1 class="mb-4">Welcome back!</h1>
             <p class="lead">
@@ -76,8 +78,50 @@
 </template>
 
 <script setup>
-  import { useUserStore } from '@/stores/users.js';
-  const { user } = useUserStore();
+  import { useUserStore } from '@/stores/users';
+  import dayjs from 'dayjs';
+  const useStore = useUserStore();
+
+  const greetTexts = ['Hello', 'Hi', 'Hey'];
+  const dayDurationGreetings = [
+    'Good morning',
+    'Good afternoon',
+    'Good evening',
+  ];
+  const updateGreetingTexts = () => {
+    const dayDuration = dayjs().hour();
+    console.log(dayDuration);
+
+    greetTexts[greetTexts.length] =
+      dayDuration >= 6 && dayDuration < 12
+        ? dayDurationGreetings[0]
+        : dayDuration >= 12 && dayDuration < 18
+        ? dayDurationGreetings[1]
+        : dayDurationGreetings[2];
+  };
+
+  const greeting = ref('');
+  const greet = () => {
+    updateGreetingTexts();
+    const num = Math.floor(Math.random() * 10);
+    const idx = num % greetTexts.length;
+    greeting.value = `${greetTexts[idx]}, ${useStore.user.data.name}`;
+  };
+
+  const time = ref('');
+  const getCurrentTime = () => (time.value = dayjs().format('HH:mm'));
+  const timer = setInterval(() => {
+    getCurrentTime();
+  }, 5000);
+
+  onMounted(() => {
+    getCurrentTime();
+    greet();
+  });
+
+  onUnmounted(() => {
+    clearInterval(timer);
+  });
 </script>
 
 <style scoped></style>
