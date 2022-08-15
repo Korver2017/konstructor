@@ -32,12 +32,14 @@
     },
   });
 
+  // If the resource does not have an image, use the default image.
   const image = computed(() => {
     return props.resource.image
       ? props.resource.image
       : 'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/presentation/sections/page-sections/page-headers/header-7.jpg';
   });
 
+  // If the resource is a favorite, set the favorite icon to red.
   const isFavorite = computed(() => {
     return userStore.user.data.favorites.includes(props.resource.id);
   });

@@ -130,7 +130,7 @@
 </template>
 
 <script setup>
-  import { tools, packages } from '@/const/menus.js';
+  import { tools, packages } from '@/const/menus';
   import { useUserStore } from '@/stores/users';
   const userStore = useUserStore();
 </script>
