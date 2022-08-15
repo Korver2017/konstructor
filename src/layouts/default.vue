@@ -4,7 +4,7 @@
 </template>
 
 <script setup>
-  import { useUserStore } from '@/stores/users.js';
+  import { useUserStore } from '@/stores/users';
   const userStore = useUserStore();
 </script>
 

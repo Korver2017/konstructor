@@ -5,6 +5,7 @@ import router from '@/router';
 import Cookies from 'js-cookie';
 
 export const useUserStore = defineStore('users', () => {
+  // Default data for fake login.
   const userInputs = reactive({
     account: 'korver@konstructor.com',
     password: 'admin',
@@ -12,6 +13,7 @@ export const useUserStore = defineStore('users', () => {
 
   const user = reactive({ data: {} });
 
+  // Fake login to retrieve user data, and set cookies for auto-login.
   const login = async () => {
     const result = await apiLogin(userInputs);
     const matched = result.data.find(
@@ -23,6 +25,7 @@ export const useUserStore = defineStore('users', () => {
     router.push('/');
   };
 
+  // Retrieve user data by fake token.
   const getUser = async () => {
     const token = Cookies.get('konstructor-token');
     const account = token.split('-')[0];

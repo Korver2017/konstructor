@@ -78,8 +78,8 @@
 </template>
 
 <script setup>
-  import { useUserStore } from '@/stores/users';
   import dayjs from 'dayjs';
+  import { useUserStore } from '@/stores/users';
   const useStore = useUserStore();
 
   const greetTexts = ['Hello', 'Hi', 'Hey'];
@@ -88,9 +88,10 @@
     'Good afternoon',
     'Good evening',
   ];
+
+  // According to the time of day, return a greeting text to update the `greetTexts`.
   const updateGreetingTexts = () => {
     const dayDuration = dayjs().hour();
-    console.log(dayDuration);
 
     greetTexts[greetTexts.length] =
       dayDuration >= 6 && dayDuration < 12
@@ -101,6 +102,8 @@
   };
 
   const greeting = ref('');
+
+  // Random to show a greeting text.
   const greet = () => {
     updateGreetingTexts();
     const num = Math.floor(Math.random() * 10);
@@ -110,6 +113,8 @@
 
   const time = ref('');
   const getCurrentTime = () => (time.value = dayjs().format('HH:mm'));
+
+  // Update the time every 5 seconds.
   const timer = setInterval(() => {
     getCurrentTime();
   }, 5000);

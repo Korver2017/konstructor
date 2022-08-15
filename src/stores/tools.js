@@ -18,10 +18,12 @@ export const useToolStore = defineStore('tools', () => {
   const id = computed(() => route.params.id);
   const category = reactive({ data: {} });
 
+  // Watch for router changes and update category data.
   const watchCategoryChanged = () =>
     watchEffect(async () => {
       category.data = {};
 
+      // When leaving the page or route is not match to any menu item, return.
       if (menuItems.indexOf(id.value) < 0) return;
 
       const result = await apiGetTool(id.value);
