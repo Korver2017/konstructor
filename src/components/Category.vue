@@ -1,5 +1,5 @@
 <template>
-  <div v-for="data in props.category.data" class="row">
+  <div v-for="data in category.data" :key="data.title" class="row">
     <div class="col-lg-3">
       <div
         class="position-sticky pb-lg-5 pb-3 mt-lg-0 mt-5 ps-2"

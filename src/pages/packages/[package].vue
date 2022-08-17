@@ -8,7 +8,8 @@
 
 <script setup>
   import { usePackageStore } from '@/stores/packages';
-  const { watchCategoryChanged, category } = usePackageStore();
+  const packageStore = usePackageStore();
+  const { watchCategoryChanged, category } = packageStore;
 
   watchCategoryChanged();
 </script>

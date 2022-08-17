@@ -67,8 +67,9 @@
 </template>
 
 <script setup>
-  import { useUserStore } from '@/stores/users.js';
-  const { userInputs, login } = useUserStore();
+  import { useUserStore } from '@/stores/users';
+  const userStore = useUserStore();
+  const { userInputs, login } = userStore;
 </script>
 
 <style scoped></style>
