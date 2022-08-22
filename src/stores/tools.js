@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { reactive } from 'vue';
+import { computed, reactive } from 'vue';
 import { useRoute } from 'vue-router';
 import { apiGetTools } from '@/api/toolsLoader';
 import { apiGetTool } from '@/api/toolsLoader';
