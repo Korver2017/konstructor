@@ -43,7 +43,7 @@
 
   // If the resource is a favorite, set the favorite icon to red.
   const isFavorite = computed(() => {
-    return user.data.favorites.includes(resource.id);
+    return user.data.favoriteIds.includes(resource.id);
   });
 
   const toggleAsFavorite = () => {
