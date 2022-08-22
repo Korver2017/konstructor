@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia';
 import { reactive } from 'vue';
 import { apiLogin, apiGetUsers } from '@/api/usersLoader';
+import { showToast } from '@/composition-api/useToastToggle';
 import router from '@/router';
 import Cookies from 'js-cookie';
 
@@ -33,6 +34,10 @@ export const useUserStore = defineStore('users', () => {
     user.data = result.data.find((user) => user.account === account);
   };
 
+  const updateUserInfo = (updatedUser) => {
+    showToast();
+  };
+
   const logout = () => {
     user.data = {};
     Cookies.remove('konstructor-token');
@@ -44,6 +49,7 @@ export const useUserStore = defineStore('users', () => {
     login,
     user,
     getUser,
+    updateUserInfo,
     logout,
   };
 });

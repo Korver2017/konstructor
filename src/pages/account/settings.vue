@@ -148,7 +148,7 @@
                     </div>
                     <div class="text-start mt-3">
                       <button
-                        @click="updateUserInfo"
+                        @click="updateUserInfo(updatedUser)"
                         type="button"
                         class="btn bg-gradient-dark mb-0"
                       >
@@ -164,17 +164,16 @@
       </div>
     </div>
   </section>
+
+  <Toast />
 </template>
 
 <script setup>
   import roles from '@/const/roles';
   import { useUserStore } from '@/stores/users';
   const userStore = useUserStore();
-  const { user } = userStore;
+  const { user, updateUserInfo } = userStore;
   const updatedUser = reactive({ ...user.data });
-  const updateUserInfo = () => {
-    console.log('updateUserInfo', updatedUser);
-  };
 </script>
 
 <style scoped></style>
