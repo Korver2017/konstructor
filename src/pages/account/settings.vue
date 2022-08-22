@@ -7,93 +7,30 @@
         </div>
       </div>
       <div class="row mt-3">
-        <div class="col-lg-10 mx-auto">
+        <div class="col-lg-8 mx-auto">
           <div class="card">
             <div class="row">
-              <div class="col-lg-5 d-flex">
-                <div class="bg-gradient-dark my-lg-3 ms-lg-3 border-radius-md">
+              <div class="col-lg-6 d-flex">
+                <div
+                  class="bg-gradient-dark my-lg-3 ms-lg-3 border-radius-md w-95"
+                >
                   <img
                     src="@/assets/img/shapes/waves-white.svg"
                     alt="pattern-lines"
                     class="position-absolute start-0 top-0 h-100 opacity-6"
                   />
                   <div class="card-body p-5 position-relative">
-                    <h3 class="text-white">Contact Information</h3>
-                    <p class="text-white opacity-8 mb-4">
-                      Fill up the form and our Team will get back to you within
-                      24 hours.
-                    </p>
-                    <div class="d-flex p-2 text-white">
-                      <div>
-                        <i class="fas fa-phone text-sm"></i>
-                      </div>
-                      <div class="ps-3">
-                        <span class="text-sm opacity-8">(+40) 772 100 200</span>
-                      </div>
-                    </div>
-                    <div class="d-flex p-2 text-white">
-                      <div>
-                        <i class="fas fa-envelope text-sm"></i>
-                      </div>
-                      <div class="ps-3">
-                        <span class="text-sm opacity-8"
-                          >hello@creative-tim.com</span
-                        >
-                      </div>
-                    </div>
-                    <div class="d-flex p-2 text-white">
-                      <div>
-                        <i class="fas fa-map-marker-alt text-sm"></i>
-                      </div>
-                      <div class="ps-3">
-                        <span class="text-sm opacity-8"
-                          >730 Dyonisie Wolf <br />
-                          Bucharest, RO 010458</span
-                        >
-                      </div>
-                    </div>
-                    <div class="mt-4">
-                      <button
-                        type="button"
-                        class="btn btn-icon-only btn-link text-white btn-lg mb-0"
-                        data-toggle="tooltip"
-                        data-placement="bottom"
-                        data-original-title="Log in with Facebook"
-                      >
-                        <i class="fab fa-facebook"></i>
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-icon-only btn-link text-white btn-lg mb-0"
-                        data-toggle="tooltip"
-                        data-placement="bottom"
-                        data-original-title="Log in with Twitter"
-                      >
-                        <i class="fab fa-twitter"></i>
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-icon-only btn-link text-white btn-lg mb-0"
-                        data-toggle="tooltip"
-                        data-placement="bottom"
-                        data-original-title="Log in with Dribbble"
-                      >
-                        <i class="fab fa-dribbble"></i>
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-icon-only btn-link text-white btn-lg mb-0"
-                        data-toggle="tooltip"
-                        data-placement="bottom"
-                        data-original-title="Log in with Instagram"
-                      >
-                        <i class="fab fa-instagram"></i>
-                      </button>
-                    </div>
+                    <h3 class="text-white">{{ user.data.name }}</h3>
+                    <h5 class="opacity-8 text-white lead">
+                      {{ user.data.account }}
+                    </h5>
+                    <h5 class="opacity-8 text-white lead text-capitalize">
+                      Role: {{ user.data.role }}
+                    </h5>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-7">
+              <div class="col-lg-6">
                 <form id="contact-form" method="post" autocomplete="off">
                   <div class="card-body position-relative p-3 ps-0">
                     <div class="row mt-4">
@@ -148,7 +85,7 @@
                     </div>
                     <div class="text-start mt-3">
                       <button
-                        @click="updateUserInfo"
+                        @click="updateUserInfo(updatedUser)"
                         type="button"
                         class="btn bg-gradient-dark mb-0"
                       >
@@ -164,17 +101,17 @@
       </div>
     </div>
   </section>
+
+  <!-- Toast component -->
+  <Toast />
 </template>
 
 <script setup>
   import roles from '@/const/roles';
   import { useUserStore } from '@/stores/users';
   const userStore = useUserStore();
-  const { user } = userStore;
+  const { user, updateUserInfo } = userStore;
   const updatedUser = reactive({ ...user.data });
-  const updateUserInfo = () => {
-    console.log('updateUserInfo', updatedUser);
-  };
 </script>
 
 <style scoped></style>

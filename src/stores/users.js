@@ -1,6 +1,8 @@
 import { defineStore } from 'pinia';
-import { reactive } from 'vue';
-import { apiLogin, apiGetUsers } from '@/api/usersLoader';
+import { computed, reactive } from 'vue';
+import { apiLogin, apiGetUsers, apiUpdateUser } from '@/api/usersLoader';
+import { setItem, getItem } from '@/composition-api/useLocalStorage';
+import { showToast } from '@/composition-api/useToastToggle';
 import router from '@/router';
 import Cookies from 'js-cookie';
 
@@ -30,7 +32,28 @@ export const useUserStore = defineStore('users', () => {
     const token = Cookies.get('konstructor-token');
     const account = token.split('-')[0];
     const result = await apiGetUsers();
+
     user.data = result.data.find((user) => user.account === account);
+    syncLocalStorage();
+  };
+
+  const syncLocalStorage = () => {
+    const item = getItem(user.data.account);
+
+    if (!item) return;
+
+    user.data.name = item.name;
+    user.data.role = item.role;
+  };
+
+  const updateUserInfo = async (updatedUser) => {
+    await apiUpdateUser(user, updatedUser);
+
+    const { account, name, role } = updatedUser;
+    setItem(account, { account, name, role });
+
+    showToast();
+    getUser();
   };
 
   const logout = () => {
@@ -44,6 +67,7 @@ export const useUserStore = defineStore('users', () => {
     login,
     user,
     getUser,
+    updateUserInfo,
     logout,
   };
 });
