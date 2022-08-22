@@ -23,14 +23,6 @@
             "url": "https://colors.eva.design/",
             "image": "",
             "tags": ["Color Tool", "Semantic Color"]
-          },
-          {
-            "id": "color-tools-2",
-            "name": "couleur.io",
-            "subtitle": "a simple tool to help you create harmonizing color palettes.",
-            "url": "https://couleur.io/",
-            "image": "https://couleur.io/images/cover.png",
-            "tags": ["Color Tool"]
           }
         ]
       },
@@ -54,27 +46,11 @@
             "tags": ["Icon"]
           },
           {
-            "id": "icons-3",
-            "name": "Unicons",
-            "subtitle": "Over 4500+ icon fonts for Developers and designers to speedup production.",
-            "url": "https://iconscout.com/unicons",
-            "image": "https://iconscout.com/og/unicons.png",
-            "tags": ["Icon"]
-          },
-          {
             "id": "icons-4",
             "name": "Iconhub",
             "subtitle": "Save your penny and time creating from scratch, use these diverse Icon set to complete your awesome design",
             "url": "https://iconhub.io/",
             "image": "https://iconhub.io/img/hero.jpeg",
-            "tags": ["Icon"]
-          },
-          {
-            "id": "icons-5",
-            "name": "IconPark",
-            "subtitle": "Abundant and colorful icon resource for free use",
-            "url": "https://iconpark.oceanengine.com/home",
-            "image": "",
             "tags": ["Icon"]
           }
         ]
