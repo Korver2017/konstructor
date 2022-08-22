@@ -109,16 +109,41 @@
                     </div>
                   </div>
                 </li>
-                <a
-                  role="button"
-                  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                  id="dropdownMenuDocs"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  @click="logout"
-                >
-                  Logout
-                </a>
+
+                <li class="nav-item dropdown dropdown-hover mx-2">
+                  <a
+                    role="button"
+                    class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                    id="dropdownMenuPages"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Account
+                    <img
+                      src="@/assets/img/down-arrow-dark.svg"
+                      alt="down-arrow"
+                      class="arrow ms-1"
+                    />
+                  </a>
+                  <div
+                    class="dropdown-menu dropdown-menu-animation p-3 border-radius-xl mt-0 mt-lg-3"
+                    aria-labelledby="dropdownMenuPages"
+                  >
+                    <div class="row d-none d-lg-block">
+                      <div class="col-12 px-4 py-2">
+                        <router-link
+                          v-for="menu in account"
+                          v-on="menu.name === 'logout' ? { click: logout } : {}"
+                          :key="menu.name"
+                          :to="`/account/${menu.name}`"
+                          :class="{ 'text-danger': menu.name === 'logout' }"
+                          class="dropdown-item border-radius-md"
+                          ><span>{{ menu.title }}</span>
+                        </router-link>
+                      </div>
+                    </div>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -130,7 +155,7 @@
 </template>
 
 <script setup>
-  import { tools, packages } from '@/const/menus';
+  import { tools, packages, account } from '@/const/menus';
   import { useUserStore } from '@/stores/users';
   const userStore = useUserStore();
   const { logout } = userStore;
