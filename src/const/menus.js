@@ -12,3 +12,10 @@ export const packages = [
   { name: 'animations', title: 'Animations' },
   { name: 'frameworks', title: 'Frameworks' },
 ];
+
+// Menu-items for the `account` page.
+export const account = [
+  { name: 'settings', title: 'Settings' },
+  { name: 'favorites', title: 'Favorites' },
+  { name: 'logout', title: 'Logout' },
+];
