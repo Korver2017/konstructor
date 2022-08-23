@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { computed, reactive } from 'vue';
+import { reactive } from 'vue';
 import { apiLogin, apiGetUsers, apiUpdateUser } from '@/api/usersLoader';
 import { setItem, getItem } from '@/composition-api/useLocalStorage';
 import { showToast } from '@/composition-api/useToastToggle';
