@@ -42,6 +42,7 @@
                   aria-expanded="false"
                   tag="li"
                   to="/"
+                  exact
                 >
                   Home
                 </router-link>
@@ -49,6 +50,9 @@
                   <a
                     role="button"
                     class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                    :class="{
+                      'router-link-active': submenuIsActive('/tools'),
+                    }"
                     id="dropdownMenuPages"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -81,6 +85,9 @@
                   <a
                     role="button"
                     class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                    :class="{
+                      'router-link-active': submenuIsActive('/packages'),
+                    }"
                     id="dropdownMenuPages"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -114,6 +121,9 @@
                   <a
                     role="button"
                     class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                    :class="{
+                      'router-link-active': submenuIsActive('/account'),
+                    }"
                     id="dropdownMenuPages"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -156,9 +166,27 @@
 
 <script setup>
   import { tools, packages, account } from '@/const/menus';
+  import { useRoute } from 'vue-router';
   import { useUserStore } from '@/stores/users';
   const userStore = useUserStore();
   const { logout } = userStore;
+  const route = useRoute();
+
+  const submenuIsActive = (input) => {
+    const paths = Array.isArray(input) ? input : [input];
+    return paths.some((path) => {
+      return route.path.indexOf(path) === 0; // current path starts with this path string
+    });
+  };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+  .navbar {
+    .router-link-active {
+      color: #17c1e8;
+      &.navbar-brand {
+        color: #344767;
+      }
+    }
+  }
+</style>
