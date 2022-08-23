@@ -5,7 +5,7 @@
         class="position-sticky pb-lg-5 pb-3 mt-lg-0 mt-5 ps-2"
         style="top: 100px"
       >
-        <h3>{{ data.title }}</h3>
+        <h3 class="text-gradient text-info">{{ data.title }}</h3>
         <h6 class="text-secondary font-weight-normal pe-3">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit.
         </h6>
