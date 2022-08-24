@@ -1,9 +1,6 @@
-<div align="center">
-  <h3 align="center">Konstructor</h3>
-  <p align="center">
-    A collection of resources for developing websites and applications.
-  </p>
-</div>
+# Konstructor
+
+A collection of resources for developing websites and applications.
 
 ## About The Project
 
@@ -15,16 +12,28 @@
 
 ## Roadmap
 
+### In-Progress
+
 - [ ] Loading effect
-- [ ] Layout update
 - [ ] Router guard
-- [ ] Category/Resources
-  - [ ] Pagination
-  - [ ] Cover image
-  - [ ] Modify resource
+- [ ] Error handling
 - [ ] Account management
   - [ ] My favorites management
   - [ ] User settings management
+
+### Backlog
+
+- [ ] Users management
+- [ ] Authentication management
+- [ ] Modify resource
+  - [ ] Add resource
+  - [ ] Edit resource
+  - [ ] Remove resource
+- [ ] Home page layout update
+- [ ] Category/Resources
+  - [ ] Pagination
+  - [ ] Cover image
+- [ ] And others...
 
 ## Recommended IDE Setup
 
