@@ -12,16 +12,27 @@ A collection of resources for developing websites and applications.
 
 ## Roadmap
 
+### In-Progress
+
 - [ ] Loading effect
-- [ ] Layout update
 - [ ] Router guard
-- [ ] Category/Resources
-  - [ ] Pagination
-  - [ ] Cover image
-  - [ ] Modify resource
+- [ ] Error handling
 - [ ] Account management
   - [ ] My favorites management
   - [ ] User settings management
+
+### Backlog
+
+- [ ] Users management
+- [ ] Authentication management
+- [ ] Modify resource
+  - [ ] Add resource
+  - [ ] Edit resource
+  - [ ] Remove resource
+- [ ] Home page layout update
+- [ ] Category/Resources
+  - [ ] Pagination
+  - [ ] Cover image
 - [ ] And others...
 
 ## Recommended IDE Setup
