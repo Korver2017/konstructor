@@ -1,9 +1,6 @@
-<div align="center">
-  <h3 align="center">Konstructor</h3>
-  <p align="center">
-    A collection of resources for developing websites and applications.
-  </p>
-</div>
+# Konstructor
+
+A collection of resources for developing websites and applications.
 
 ## About The Project
 
@@ -25,6 +22,7 @@
 - [ ] Account management
   - [ ] My favorites management
   - [ ] User settings management
+- [ ] And others...
 
 ## Recommended IDE Setup
 
