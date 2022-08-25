@@ -15,7 +15,7 @@
               <button
                 type="button"
                 class="btn bg-gradient-primary btn-sm me-2 mb-0"
-                @click="hideToast"
+                @click="unmountToast"
               >
                 Confirm
               </button>
@@ -28,7 +28,7 @@
 </template>
 
 <script setup>
-  import { isShown, hideToast } from '@/composition-api/useToastToggle';
+  import { isShown, unmountToast } from '@/composition-api/useToast';
 </script>
 
 <style scoped lang="scss">
