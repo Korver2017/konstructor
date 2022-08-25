@@ -47,12 +47,12 @@
   });
 
   const toggleAsFavorite = () => {
-    const favorites = user.data.favorites;
-    const idx = favorites.indexOf(resource.id);
+    const favoriteIds = user.data.favoriteIds;
+    const idx = favoriteIds.indexOf(resource.id);
 
-    if (idx > -1) return favorites.splice(idx, 1);
+    if (idx > -1) return favoriteIds.splice(idx, 1);
 
-    favorites.push(resource.id);
+    favoriteIds.push(resource.id);
   };
 </script>
 
