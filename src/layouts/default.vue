@@ -11,6 +11,20 @@
   import { useUserStore } from '@/stores/users';
   const userStore = useUserStore();
   import { isLoading } from '@/composition-api/useLoading';
+  import { useToolStore } from '@/stores/tools';
+  import { usePackageStore } from '@/stores/packages';
+  const toolStore = useToolStore();
+  const packageStore = usePackageStore();
+  const { getTools } = toolStore;
+  const { getPackages } = packageStore;
+  import { mountLoading, unmountLoading } from '@/composition-api/useLoading';
+
+  onMounted(async () => {
+    mountLoading();
+    await getTools();
+    await getPackages();
+    unmountLoading();
+  });
 </script>
 
 <style scoped>

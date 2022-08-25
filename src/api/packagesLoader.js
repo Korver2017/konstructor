@@ -5,5 +5,3 @@ const packagesLoader = axios.create({
 });
 
 export const apiGetPackages = () => packagesLoader.get('/packages.json');
-export const apiGetPackage = (url) =>
-  packagesLoader.get(`/packages/${url}.json`);

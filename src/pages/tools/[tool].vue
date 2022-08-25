@@ -9,9 +9,9 @@
 <script setup>
   import { useToolStore } from '@/stores/tools';
   const toolStore = useToolStore();
-  const { watchCategoryChanged, category } = toolStore;
+  const { getTool, category } = toolStore;
 
-  watchCategoryChanged();
+  getTool();
 </script>
 
 <style scoped></style>

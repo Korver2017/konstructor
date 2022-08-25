@@ -1,0 +1,36 @@
+{
+  "animations": {
+    "title": "Animations",
+    "resources": [
+      {
+        "id": "animations-1",
+        "name": "ScrollReveal",
+        "subtitle": "Animate elements as they scroll into view.",
+        "url": "https://github.com/jlmakes/scrollreveal",
+        "image": "https://scrollrevealjs.org/img/share.png",
+        "tags": ["Animation"]
+      },
+      {
+        "id": "animations-2",
+        "name": "vivus",
+        "subtitle": "JavaScript library to make drawing animation on SVG",
+        "url": "https://github.com/maxwellito/vivus",
+        "image": "",
+        "tags": ["Animation"]
+      }
+    ]
+  },
+  "frameworks": {
+    "title": "Frameworks",
+    "resources": [
+      {
+        "id": "frameworks-1",
+        "name": "Vue.js",
+        "subtitle": "The Progressive JavaScript Framework.",
+        "url": "https://github.com/vuejs/vue",
+        "image": "https://vuejs.org/images/logo.png",
+        "tags": ["Framework"]
+      }
+    ]
+  }
+}
