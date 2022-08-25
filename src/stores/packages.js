@@ -18,21 +18,21 @@ export const usePackageStore = defineStore('packages', () => {
 
   const menuItems = menu.map((item) => item.name);
   const route = useRoute();
-  const source = computed(() => route.params.package);
+  const packageType = computed(() => route.params.package);
   const category = reactive({ data: {} });
 
   // Watch for router changes and update category data.
-  const watchCategoryChanged = () =>
+  const getPackage = () =>
     watchEffect(async () => {
       // When leaving the page or route is not match to any menu item, return.
-      if (menuItems.indexOf(source.value) < 0) return;
-      mountLoading();
-      category.data = {};
+      if (menuItems.indexOf(packageType.value) < 0) return;
 
-      const result = await apiGetPackage(source.value);
-      category.data = result.data;
-      unmountLoading();
+      const categoryData = packages.categories[packageType.value];
+      if (!categoryData) return (category.data = { ...packages.categories });
+
+      category.data = {};
+      category.data[packageType.value] = categoryData;
     });
 
-  return { getPackages, packages, watchCategoryChanged, category };
+  return { getPackages, packages, getPackage, category };
 });

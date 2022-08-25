@@ -9,9 +9,9 @@
 <script setup>
   import { usePackageStore } from '@/stores/packages';
   const packageStore = usePackageStore();
-  const { watchCategoryChanged, category } = packageStore;
+  const { getPackage, category } = packageStore;
 
-  watchCategoryChanged();
+  getPackage();
 </script>
 
 <style scoped></style>
