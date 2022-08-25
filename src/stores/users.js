@@ -2,7 +2,8 @@ import { defineStore } from 'pinia';
 import { reactive } from 'vue';
 import { apiLogin, apiGetUsers, apiUpdateUser } from '@/api/usersLoader';
 import { setItem, getItem } from '@/composition-api/useLocalStorage';
-import { showToast } from '@/composition-api/useToastToggle';
+import { mountToast } from '@/composition-api/useToast';
+import { mountLoading, unmountLoading } from '@/composition-api/useLoading';
 import router from '@/router';
 import Cookies from 'js-cookie';
 
@@ -17,6 +18,7 @@ export const useUserStore = defineStore('users', () => {
 
   // Fake login to retrieve user data, and set cookies for auto-login.
   const login = async () => {
+    mountLoading();
     const result = await apiLogin(userInputs);
     const matched = result.data.find(
       (user) => user.account === userInputs.account
@@ -24,17 +26,20 @@ export const useUserStore = defineStore('users', () => {
 
     user.data = matched;
     Cookies.set('konstructor-token', `${userInputs.account}-fake-token`);
+    unmountLoading();
     router.push('/');
   };
 
   // Retrieve user data by fake token.
   const getUser = async () => {
+    mountLoading();
     const token = Cookies.get('konstructor-token');
     const account = token.split('-')[0];
     const result = await apiGetUsers();
 
     user.data = result.data.find((user) => user.account === account);
     syncLocalStorage();
+    unmountLoading();
   };
 
   const syncLocalStorage = () => {
@@ -47,12 +52,14 @@ export const useUserStore = defineStore('users', () => {
   };
 
   const updateUserInfo = async (updatedUser) => {
+    mountLoading();
     await apiUpdateUser(user, updatedUser);
 
     const { account, name, role } = updatedUser;
     setItem(account, { account, name, role });
+    unmountLoading();
 
-    showToast();
+    mountToast();
     getUser();
   };
 

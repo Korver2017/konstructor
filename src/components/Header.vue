@@ -155,10 +155,11 @@
 </template>
 
 <script setup>
-  import dayjs from 'dayjs';
   import { useUserStore } from '@/stores/users';
   const useStore = useUserStore();
   import { apiGetRandomQuote } from '@/api/quoteLoader';
+  import dayjs from 'dayjs';
+  import { mountLoading, unmountLoading } from '@/composition-api/useLoading';
 
   const greetTexts = ['Hello', 'Hi', 'Hey'];
   const dayDurationGreetings = [
@@ -199,8 +200,10 @@
 
   const quote = reactive({ data: {} });
   const getQuote = async () => {
+    mountLoading();
     const result = await apiGetRandomQuote();
     quote.data = result.data;
+    unmountLoading();
   };
 
   onMounted(() => {
