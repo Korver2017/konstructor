@@ -17,10 +17,13 @@
   const packageStore = usePackageStore();
   const { getTools } = toolStore;
   const { getPackages } = packageStore;
+  import { mountLoading, unmountLoading } from '@/composition-api/useLoading';
 
-  onMounted(() => {
-    getTools();
-    getPackages();
+  onMounted(async () => {
+    mountLoading();
+    await getTools();
+    await getPackages();
+    unmountLoading();
   });
 </script>
 

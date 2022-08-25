@@ -2,18 +2,14 @@ import { defineStore } from 'pinia';
 import { computed, reactive } from 'vue';
 import { useRoute } from 'vue-router';
 import { apiGetTools } from '@/api/toolsLoader';
-import { mountLoading, unmountLoading } from '@/composition-api/useLoading';
 import { tools as menu } from '@/const/menus';
-import { CREATE_BLOCK } from '@vue/compiler-core';
 
 export const useToolStore = defineStore('tools', () => {
   const tools = reactive({ categories: {} });
 
   const getTools = async () => {
-    mountLoading();
     const result = await apiGetTools();
     tools.categories = result.data;
-    unmountLoading();
   };
 
   const menuItems = menu.map((item) => item.name);
