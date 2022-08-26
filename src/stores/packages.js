@@ -8,8 +8,12 @@ export const usePackageStore = defineStore('packages', () => {
   const packages = reactive({ categories: {} });
 
   const getPackages = async () => {
-    const result = await apiGetPackages();
-    packages.categories = result.data;
+    try {
+      const result = await apiGetPackages();
+      packages.categories = result.data;
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const menuItems = menu.map((item) => item.name);
