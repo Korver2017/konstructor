@@ -201,8 +201,14 @@
   const quote = reactive({ data: {} });
   const getQuote = async () => {
     mountLoading();
-    const result = await apiGetRandomQuote();
-    quote.data = result.data;
+
+    try {
+      const result = await apiGetRandomQuote();
+      quote.data = result.data;
+    } catch (error) {
+      console.log(error);
+    }
+
     unmountLoading();
   };
 

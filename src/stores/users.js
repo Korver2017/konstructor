@@ -19,13 +19,19 @@ export const useUserStore = defineStore('users', () => {
   // Fake login to retrieve user data, and set cookies for auto-login.
   const login = async () => {
     mountLoading();
-    const result = await apiLogin(userInputs);
-    const matched = result.data.find(
-      (user) => user.account === userInputs.account
-    );
 
-    user.data = matched;
-    Cookies.set('konstructor-token', `${userInputs.account}-fake-token`);
+    try {
+      const result = await apiLogin(userInputs);
+      const matched = result.data.find(
+        (user) => user.account === userInputs.account
+      );
+
+      user.data = matched;
+      Cookies.set('konstructor-token', `${userInputs.account}-fake-token`);
+    } catch (error) {
+      console.log(error);
+    }
+
     unmountLoading();
     router.push('/');
   };
@@ -35,10 +41,15 @@ export const useUserStore = defineStore('users', () => {
     mountLoading();
     const token = Cookies.get('konstructor-token');
     const account = token.split('-')[0];
-    const result = await apiGetUsers();
 
-    user.data = result.data.find((user) => user.account === account);
-    syncLocalStorage();
+    try {
+      const result = await apiGetUsers();
+      user.data = result.data.find((user) => user.account === account);
+      syncLocalStorage();
+    } catch (error) {
+      console.log(error);
+    }
+
     unmountLoading();
   };
 
@@ -53,14 +64,20 @@ export const useUserStore = defineStore('users', () => {
 
   const updateUserInfo = async (updatedUser) => {
     mountLoading();
-    await apiUpdateUser(user, updatedUser);
 
-    const { account, name, role } = updatedUser;
-    setItem(account, { account, name, role });
+    try {
+      await apiUpdateUser(user, updatedUser);
+
+      const { account, name, role } = updatedUser;
+      setItem(account, { account, name, role });
+
+      mountToast();
+      getUser();
+    } catch (error) {
+      console.log(error);
+    }
+
     unmountLoading();
-
-    mountToast();
-    getUser();
   };
 
   const logout = () => {
