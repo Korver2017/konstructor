@@ -80,9 +80,13 @@ export const useUserStore = defineStore('users', () => {
     unmountLoading();
   };
 
-  const logout = () => {
+  const clearUser = () => {
     user.data = {};
     Cookies.remove('konstructor-token');
+  };
+
+  const logout = () => {
+    clearUser();
     router.push('/login');
   };
 
@@ -92,6 +96,7 @@ export const useUserStore = defineStore('users', () => {
     user,
     getUser,
     updateUserInfo,
+    clearUser,
     logout,
   };
 });
