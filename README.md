@@ -14,9 +14,11 @@ A collection of resources for developing websites and applications.
 
 ### In-Progress
 
-- [ ] Loading effect
-- [ ] Router guard
-- [ ] Error handling
+- [x] Loading effect
+- [x] Router guard
+- [x] Error handling
+- [ ] Retrieve resources timing
+- [ ] Composition-api syntax
 - [ ] Account management
   - [ ] My favorites management
   - [ ] User settings management

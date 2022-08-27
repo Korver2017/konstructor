@@ -20,7 +20,9 @@
   import { mountLoading, unmountLoading } from '@/composition-api/useLoading';
 
   onMounted(async () => {
+    if (!userStore.user.isAuthenticated) return;
     mountLoading();
+
     await getTools();
     await getPackages();
     unmountLoading();
