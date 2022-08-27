@@ -22,6 +22,7 @@
                         placeholder="Email"
                         aria-label="Email"
                         v-model="userInputs.account"
+                        @keyup.enter="login"
                       />
                     </div>
                     <label>Password</label>
@@ -32,6 +33,7 @@
                         placeholder="Password"
                         aria-label="Password"
                         v-model="userInputs.password"
+                        @keyup.enter="login"
                       />
                     </div>
                     <div class="text-center">

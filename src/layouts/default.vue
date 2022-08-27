@@ -8,23 +8,25 @@
 </template>
 
 <script setup>
-  import { useUserStore } from '@/stores/users';
-  const userStore = useUserStore();
   import { isLoading } from '@/composition-api/useLoading';
+  import { mountLoading, unmountLoading } from '@/composition-api/useLoading';
+  import { useUserStore } from '@/stores/users';
   import { useToolStore } from '@/stores/tools';
   import { usePackageStore } from '@/stores/packages';
+  const userStore = useUserStore();
   const toolStore = useToolStore();
   const packageStore = usePackageStore();
   const { getTools } = toolStore;
   const { getPackages } = packageStore;
-  import { mountLoading, unmountLoading } from '@/composition-api/useLoading';
 
   onMounted(async () => {
-    if (!userStore.user.isAuthenticated) return;
+    if (!userStore.user.data.isAuthenticated) return;
+
     mountLoading();
 
     await getTools();
     await getPackages();
+
     unmountLoading();
   });
 </script>

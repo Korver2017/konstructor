@@ -17,7 +17,7 @@ A collection of resources for developing websites and applications.
 - [x] Loading effect
 - [x] Router guard
 - [x] Error handling
-- [ ] Retrieve resources timing
+- [x] Retrieve resources timing
 - [ ] Composition-api syntax
 - [ ] Account management
   - [ ] My favorites management
