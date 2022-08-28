@@ -28,7 +28,8 @@
 </template>
 
 <script setup>
-  import { isShown, unmountToast } from '@/composition-api/useToast';
+  import { useToast } from '@/composition-api';
+  const { isShown, unmountToast } = useToast();
 </script>
 
 <style scoped lang="scss">

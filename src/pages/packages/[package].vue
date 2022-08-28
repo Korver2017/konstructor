@@ -8,8 +8,8 @@
 
 <script setup>
   import { usePackageStore } from '@/stores/packages';
-  const packageStore = usePackageStore();
-  const { getPackage, category } = packageStore;
+  const { getPackage } = usePackageStore();
+  const { category } = storeToRefs(usePackageStore());
 
   getPackage();
 </script>

@@ -24,35 +24,34 @@
 
 <script setup>
   import { useUserStore } from '@/stores/users';
-  const userStore = useUserStore();
-  const { user } = userStore;
+  const { user } = storeToRefs(useUserStore());
   const props = defineProps({
     resource: {
       type: Object,
       default: () => ({}),
     },
   });
-  const { resource } = props;
+  const { resource } = toRefs(props);
 
   // If the resource does not have an image, use the default image.
   const image = computed(() => {
-    return resource.image
-      ? resource.image
+    return resource.value.image
+      ? resource.value.image
       : 'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/presentation/sections/page-sections/page-headers/header-7.jpg';
   });
 
   // If the resource is a favorite, set the favorite icon to red.
   const isFavorite = computed(() => {
-    return user.data.favoriteIds.includes(resource.id);
+    return user.value.data.favoriteIds.includes(resource.value.id);
   });
 
   const toggleAsFavorite = () => {
-    const favoriteIds = user.data.favoriteIds;
-    const idx = favoriteIds.indexOf(resource.id);
+    const favoriteIds = user.value.data.favoriteIds;
+    const idx = favoriteIds.indexOf(resource.value.id);
 
     if (idx > -1) return favoriteIds.splice(idx, 1);
 
-    favoriteIds.push(resource.id);
+    favoriteIds.push(resource.value.id);
   };
 </script>
 

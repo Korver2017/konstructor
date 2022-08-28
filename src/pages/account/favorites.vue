@@ -8,9 +8,9 @@
 
 <script setup>
   import { useUserStore } from '@/stores/users';
-  const userStore = useUserStore();
-  const { user } = userStore;
+  const { user } = storeToRefs(useUserStore());
   const category = reactive({ data: {} });
+
   category.data = user.data.favorites;
 </script>
 

@@ -155,11 +155,12 @@
 </template>
 
 <script setup>
+  import { useLoading } from '@/composition-api';
   import { useUserStore } from '@/stores/users';
-  const useStore = useUserStore();
   import { apiGetRandomQuote } from '@/api/quoteLoader';
   import dayjs from 'dayjs';
-  import { mountLoading, unmountLoading } from '@/composition-api/useLoading';
+  const { mountLoading, unmountLoading } = useLoading();
+  const { user } = storeToRefs(useUserStore());
 
   const greetTexts = ['Hello', 'Hi', 'Hey'];
   const dayDurationGreetings = [
@@ -187,7 +188,7 @@
     updateGreetingTexts();
     const num = Math.floor(Math.random() * 10);
     const idx = num % greetTexts.length;
-    greeting.value = `${greetTexts[idx]}, ${useStore.user.data.name}`;
+    greeting.value = `${greetTexts[idx]}, ${user.value.data.name}`;
   };
 
   const time = ref('');

@@ -70,8 +70,7 @@
 
 <script setup>
   import { useUserStore } from '@/stores/users';
-  const userStore = useUserStore();
-  const { userInputs, login } = userStore;
+  const { userInputs, login } = useUserStore();
 </script>
 
 <style scoped></style>

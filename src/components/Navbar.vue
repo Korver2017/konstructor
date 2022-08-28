@@ -168,8 +168,7 @@
   import { tools, packages, account } from '@/const/menus';
   import { useRoute } from 'vue-router';
   import { useUserStore } from '@/stores/users';
-  const userStore = useUserStore();
-  const { logout } = userStore;
+  const { logout } = useUserStore();
   const route = useRoute();
 
   const submenuIsActive = (input) => {
