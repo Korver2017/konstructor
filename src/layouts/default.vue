@@ -8,12 +8,13 @@
 </template>
 
 <script setup>
-  import { useLoading } from '@/composition-api';
   import { useUserStore } from '@/stores/users';
+  import { useLoadingStore } from '@/stores/loading';
   import { useToolStore } from '@/stores/tools';
   import { usePackageStore } from '@/stores/packages';
-  const { isLoading, mountLoading, unmountLoading } = useLoading();
   const { user } = storeToRefs(useUserStore());
+  const { isLoading } = storeToRefs(useLoadingStore());
+  const { mountLoading, unmountLoading } = useLoadingStore();
   const { getTools } = useToolStore();
   const { getPackages } = usePackageStore();
 
