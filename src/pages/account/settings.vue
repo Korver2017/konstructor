@@ -109,8 +109,7 @@
 <script setup>
   import roles from '@/const/roles';
   import { useUserStore } from '@/stores/users';
-  const userStore = useUserStore();
-  const { user, updateUserInfo } = userStore;
+  const { user, updateUserInfo } = useUserStore();
   const updatedUser = reactive({ ...user.data });
 </script>
 

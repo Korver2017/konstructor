@@ -8,8 +8,8 @@
 
 <script setup>
   import { useToolStore } from '@/stores/tools';
-  const toolStore = useToolStore();
-  const { getTool, category } = toolStore;
+  const { getTool } = useToolStore();
+  const { category } = storeToRefs(useToolStore());
 
   getTool();
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <Navbar v-if="userStore.user.data.isAuthenticated" />
+  <Navbar v-if="user.data.isAuthenticated" />
   <router-view />
 
   <Transition>
@@ -8,21 +8,21 @@
 </template>
 
 <script setup>
+  import { useLoading } from '@/composition-api';
   import { useUserStore } from '@/stores/users';
-  const userStore = useUserStore();
-  import { isLoading } from '@/composition-api/useLoading';
   import { useToolStore } from '@/stores/tools';
   import { usePackageStore } from '@/stores/packages';
-  const toolStore = useToolStore();
-  const packageStore = usePackageStore();
-  const { getTools } = toolStore;
-  const { getPackages } = packageStore;
-  import { mountLoading, unmountLoading } from '@/composition-api/useLoading';
+  const { isLoading, mountLoading, unmountLoading } = useLoading();
+  const { user } = storeToRefs(useUserStore());
+  const { getTools } = useToolStore();
+  const { getPackages } = usePackageStore();
 
   onMounted(async () => {
     mountLoading();
+
     await getTools();
     await getPackages();
+
     unmountLoading();
   });
 </script>

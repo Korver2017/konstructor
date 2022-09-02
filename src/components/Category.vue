@@ -30,6 +30,7 @@
       default: () => ({}),
     },
   });
+  const { category } = toRefs(props);
 </script>
 
 <style scoped></style>
