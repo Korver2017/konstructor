@@ -10,7 +10,6 @@ export const tools = [
 export const packages = [
   { name: 'all', title: 'All' },
   { name: 'animations', title: 'Animations' },
-  { name: 'frameworks', title: 'Frameworks' },
 ];
 
 // Menu-items for the `account` page.
