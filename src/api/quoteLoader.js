@@ -4,4 +4,4 @@ const quoteLoader = axios.create({
   baseURL: 'https://api.quotable.io/',
 });
 
-export const apiGetRandomQuote = () => quoteLoader().get('/random');
+export const apiGetRandomQuote = () => quoteLoader.get('/random');
