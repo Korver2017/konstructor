@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const toolsLoader = axios.create({
-  baseURL: 'https://api.quotable.io/random',
+  baseURL: 'https://api.quotable.io',
 });
 
-export const apiGetRandomQuote = () => toolsLoader();
+export const apiGetRandomQuote = () => toolsLoader().get('/random');

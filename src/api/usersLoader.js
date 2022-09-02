@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const usersLoader = axios.create({
-  baseURL: '/src/api/data',
+  baseURL: '/data',
 });
 
 export const apiLogin = (userInputs) =>
