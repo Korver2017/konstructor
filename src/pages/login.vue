@@ -56,7 +56,7 @@
                 <div
                   class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"
                   :style="{
-                    backgroundImage: `url(${curved9})`,
+                    backgroundImage: `url(${sideImage})`,
                   }"
                 ></div>
               </div>
@@ -69,7 +69,7 @@
 </template>
 
 <script setup>
-  import curved9 from '@/assets/img/curved-images/curved9.jpg';
+  import sideImage from '@/assets/img/curved-images/curved9.jpg';
   import { useUserStore } from '@/stores/users';
   const { userInputs, login } = useUserStore();
 </script>

@@ -3,9 +3,9 @@
   <header class="position-relative">
     <div
       class="page-header min-vh-100"
-      :style="{ backgroundImage: `url(${meeting})` }"
+      :style="{ backgroundImage: `url(${cover})` }"
     >
-      <span class="mask bg-gradient-warning"></span>
+      <span class="mask bg-gradient-secondary"></span>
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-start">
@@ -87,7 +87,10 @@
 </template>
 
 <script setup>
-  import meeting from '@/assets/img/meeting.jpg';
+  import cover_1 from '@/assets/img/meeting.jpg';
+  import cover_2 from '@/assets/img/annie-spratt.jpg';
+  import cover_3 from '@/assets/img/card-3.jpg';
+  import cover_4 from '@/assets/img/mimi-thian.jpg';
   import { useUserStore } from '@/stores/users';
   import { useUtilStore } from '@/stores/utils';
   import { apiGetRandomQuote } from '@/api/quoteLoader';
@@ -95,7 +98,13 @@
   const { user } = storeToRefs(useUserStore());
   const { mountLoading, unmountLoading } = useUtilStore();
 
-  const greetTexts = ['Hello', 'Hi', 'Hey'];
+  const covers = [cover_1, cover_2, cover_3, cover_4];
+  const cover = ref('');
+  const num = Math.floor(Math.random() * 10);
+  const idx = num % covers.length;
+  cover.value = covers[idx];
+
+  const greetTexts = ['Hello'];
   const dayDurationGreetings = [
     'Good morning',
     'Good afternoon',
@@ -160,7 +169,7 @@
 <style scoped lang="scss">
   .time-text {
     font-size: 130px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
   }
   .quote {
     &-content {
