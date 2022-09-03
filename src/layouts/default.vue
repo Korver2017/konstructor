@@ -8,22 +8,27 @@
 </template>
 
 <script setup>
-  import { useLoading } from '@/composition-api';
+  import { useUtilStore } from '@/stores/utils';
   import { useUserStore } from '@/stores/users';
   import { useToolStore } from '@/stores/tools';
   import { usePackageStore } from '@/stores/packages';
-  const { isLoading, mountLoading, unmountLoading } = useLoading();
+  const { isLoading } = storeToRefs(useUtilStore());
+  const { mountLoading, unmountLoading } = useUtilStore();
   const { user } = storeToRefs(useUserStore());
-  const { getTools } = useToolStore();
-  const { getPackages } = usePackageStore();
+  const { getTools, clearTools } = useToolStore();
+  const { getPackages, clearPackages } = usePackageStore();
 
-  onMounted(async () => {
-    mountLoading();
+  watchEffect(async () => {
+    if (user.value.data.isAuthenticated) {
+      mountLoading();
+      await getTools();
+      await getPackages();
+      unmountLoading();
+      return;
+    }
 
-    await getTools();
-    await getPackages();
-
-    unmountLoading();
+    clearTools();
+    clearPackages();
   });
 </script>
 

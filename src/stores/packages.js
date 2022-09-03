@@ -34,5 +34,7 @@ export const usePackageStore = defineStore('packages', () => {
       category.data[packageType.value] = categoryData;
     });
 
-  return { getPackages, packages, getPackage, category };
+  const clearPackages = () => (packages.categories = {});
+
+  return { getPackages, packages, getPackage, clearPackages, category };
 });

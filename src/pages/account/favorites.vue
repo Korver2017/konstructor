@@ -11,7 +11,7 @@
   const { user } = storeToRefs(useUserStore());
   const category = reactive({ data: {} });
 
-  category.data = user.data.favorites;
+  category.data = user.value.data.favorites;
 </script>
 
 <style scoped></style>
