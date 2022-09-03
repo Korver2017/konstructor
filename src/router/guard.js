@@ -4,7 +4,7 @@ import Cookies from 'js-cookie';
 const autoAuth = async () => {
   const userStore = useUserStore();
   const cookie = Cookies.get('konstructor-token');
-  const isCorrect = cookie === 'korver@konstructor.com-fake-token';
+  const isCorrect = cookie === 'admin@admin.com-fake-token';
   const notAuthenticated = !userStore.user.data.isAuthenticated;
 
   if (isCorrect) {

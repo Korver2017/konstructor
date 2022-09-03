@@ -1,14 +1,7 @@
 [
   {
     "account": "admin@admin.com",
-    "name": "admin",
-    "role": "admin",
-    "isAuthenticated": true,
-    "favorites": []
-  },
-  {
-    "account": "korver@konstructor.com",
-    "name": "Korver",
+    "name": "Admin",
     "role": "admin",
     "isAuthenticated": true,
     "favoriteIds": ["color-tools-1", "icons-1", "icons-2", "icons-4", "avatars-1", "animations-2"],
@@ -69,12 +62,5 @@
         ]
       }
     }
-  },
-  {
-    "account": "user@user.com",
-    "name": "John Doe",
-    "role": "user",
-    "isAuthenticated": true,
-    "favorites": []
   }
 ]
