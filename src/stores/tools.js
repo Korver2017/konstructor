@@ -8,6 +8,8 @@ export const useToolStore = defineStore('tools', () => {
   const tools = reactive({ categories: {} });
 
   const getTools = async () => {
+    console.log('getTools');
+
     try {
       const result = await apiGetTools();
       tools.categories = result.data;
@@ -34,5 +36,7 @@ export const useToolStore = defineStore('tools', () => {
       category.data[tool.value] = categoryData;
     });
 
-  return { getTools, tools, getTool, category };
+  const clearTools = () => (tools.categories = {});
+
+  return { getTools, tools, getTool, clearTools, category };
 });

@@ -12,19 +12,23 @@
   import { useUserStore } from '@/stores/users';
   import { useToolStore } from '@/stores/tools';
   import { usePackageStore } from '@/stores/packages';
-  const { user } = storeToRefs(useUserStore());
   const { isLoading } = storeToRefs(useUtilStore());
   const { mountLoading, unmountLoading } = useUtilStore();
-  const { getTools } = useToolStore();
-  const { getPackages } = usePackageStore();
+  const { user } = storeToRefs(useUserStore());
+  const { getTools, clearTools } = useToolStore();
+  const { getPackages, clearPackages } = usePackageStore();
 
-  onMounted(async () => {
-    mountLoading();
+  watchEffect(async () => {
+    if (user.value.data.isAuthenticated) {
+      mountLoading();
+      await getTools();
+      await getPackages();
+      unmountLoading();
+      return;
+    }
 
-    await getTools();
-    await getPackages();
-
-    unmountLoading();
+    clearTools();
+    clearPackages();
   });
 </script>
 
