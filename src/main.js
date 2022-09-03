@@ -10,6 +10,7 @@ import '@/assets/css/nucleo-svg.css';
 import '@/assets/css/nucleo-svg.css';
 // CSS Styles
 import '@/assets/scss/soft-design-system-pro.scss';
+import '@/assets/scss/custom.scss';
 
 const pinia = createPinia();
 const app = createApp(App);
