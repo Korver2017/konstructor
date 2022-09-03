@@ -11,7 +11,7 @@ export const useUserStore = defineStore('users', () => {
   const { mountLoading, unmountLoading, mountToast } = useUtilStore();
   // Default data for fake login.
   const userInputs = reactive({
-    account: 'korver@konstructor.com',
+    account: 'admin@admin.com',
     password: 'admin',
   });
 
@@ -28,6 +28,7 @@ export const useUserStore = defineStore('users', () => {
       );
 
       user.data = matched;
+      syncLocalStorage();
       Cookies.set('konstructor-token', `${userInputs.account}-fake-token`);
     } catch (error) {
       console.log(error);
