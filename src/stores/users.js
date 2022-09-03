@@ -18,7 +18,9 @@ export const useUserStore = defineStore('users', () => {
   const user = reactive({ data: {} });
 
   // Fake login to retrieve user data, and set cookies for auto-login.
-  const login = async () => {
+  const login = async (isValid) => {
+    if (isValid) return;
+
     mountLoading();
 
     try {
@@ -64,7 +66,9 @@ export const useUserStore = defineStore('users', () => {
     user.data.role = item.role;
   };
 
-  const updateUserInfo = async (updatedUser) => {
+  const updateUserInfo = async (isValid, updatedUser) => {
+    if (isValid) return;
+
     mountLoading();
 
     try {

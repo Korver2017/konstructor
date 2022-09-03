@@ -14,25 +14,53 @@
                 <form>
                   <div class="mb-3">
                     <input
+                      @blur="v$.account.$touch"
                       v-model="userInputs.account"
                       type="email"
                       class="form-control"
+                      :class="{
+                        'border-danger':
+                          v$.account.$dirty && v$.account.$invalid,
+                      }"
                       placeholder="Email"
                       aria-label="Email"
                     />
+                    <div
+                      class="input-errors"
+                      v-for="error of v$.account.$errors"
+                      :key="error.$uid"
+                    >
+                      <div class="error-msg text-danger">
+                        {{ error.$message }}
+                      </div>
+                    </div>
                   </div>
                   <div class="mb-3">
                     <input
+                      @blur="v$.password.$touch"
                       v-model="userInputs.password"
                       type="password"
                       class="form-control"
+                      :class="{
+                        'border-danger':
+                          v$.password.$dirty && v$.password.$invalid,
+                      }"
                       placeholder="Password"
                       aria-label="Password"
                     />
+                    <div
+                      class="input-errors"
+                      v-for="error of v$.password.$errors"
+                      :key="error.$uid"
+                    >
+                      <div class="error-msg text-danger">
+                        {{ error.$message }}
+                      </div>
+                    </div>
                   </div>
                   <div class="text-center">
                     <button
-                      @click="login"
+                      @click="login(v$.$invalid)"
                       type="button"
                       class="btn bg-gradient-info w-100 mt-4 mb-2"
                     >
@@ -50,8 +78,15 @@
 </template>
 
 <script setup>
+  import useVuelidate from '@vuelidate/core';
+  import { required } from '@vuelidate/validators';
   import { useUserStore } from '@/stores/users';
   const { userInputs, login } = useUserStore();
+  const rules = {
+    account: { required },
+    password: { required },
+  };
+  const v$ = useVuelidate(rules, userInputs);
 </script>
 
 <style scoped>

@@ -1,4 +1,12 @@
 .input-group .form-control:focus, .form-control:focus {
   border: 1px solid #8392ab !important;
   box-shadow: 0 0 2px #8392ab !important;
+  &.border-danger {
+    border: 1px solid #ea0606 !important;
+    box-shadow: 0 0 2px #ea0606 !important;
+  }
+}
+.input-errors {
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
 }

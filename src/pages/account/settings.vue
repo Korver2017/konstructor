@@ -47,16 +47,30 @@
                           />
                         </div>
                       </div>
-                      <div class="col-md-12 ps-2">
+                      <div class="col-md-12 ps-2 mb-4">
                         <label>User name</label>
-                        <div class="input-group mb-4">
+                        <div class="input-group">
                           <input
+                            @blur="v$.name.$touch"
+                            v-model="updatedUser.name"
                             type="text"
                             class="form-control"
+                            :class="{
+                              'border-danger':
+                                v$.name.$dirty && v$.name.$invalid,
+                            }"
                             placeholder=""
                             aria-label=""
-                            v-model="updatedUser.name"
                           />
+                        </div>
+                        <div
+                          class="input-errors"
+                          v-for="error of v$.name.$errors"
+                          :key="error.$uid"
+                        >
+                          <div class="error-msg text-danger">
+                            {{ error.$message }}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -85,7 +99,7 @@
                     </div>
                     <div class="text-start mt-3">
                       <button
-                        @click="updateUserInfo(updatedUser)"
+                        @click="updateUserInfo(v$.$invalid, updatedUser)"
                         type="button"
                         class="btn bg-gradient-dark mb-0"
                       >
@@ -108,9 +122,16 @@
 
 <script setup>
   import roles from '@/const/roles';
+  import useVuelidate from '@vuelidate/core';
+  import { required } from '@vuelidate/validators';
   import { useUserStore } from '@/stores/users';
   const { user, updateUserInfo } = useUserStore();
   const updatedUser = reactive({ ...user.data });
+  const rules = {
+    role: { required },
+    name: { required },
+  };
+  const v$ = useVuelidate(rules, updatedUser);
 </script>
 
 <style scoped></style>
