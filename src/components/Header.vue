@@ -156,11 +156,11 @@
 
 <script setup>
   import { useUserStore } from '@/stores/users';
-  import { useLoadingStore } from '@/stores/loading';
+  import { useUtilStore } from '@/stores/utils';
   import { apiGetRandomQuote } from '@/api/quoteLoader';
   import dayjs from 'dayjs';
   const { user } = storeToRefs(useUserStore());
-  const { mountLoading, unmountLoading } = useLoadingStore();
+  const { mountLoading, unmountLoading } = useUtilStore();
 
   const greetTexts = ['Hello', 'Hi', 'Hey'];
   const dayDurationGreetings = [

@@ -28,8 +28,9 @@
 </template>
 
 <script setup>
-  import { useToast } from '@/composition-api';
-  const { isShown, unmountToast } = useToast();
+  import { useUtilStore } from '@/stores/utils';
+  const { isShown } = storeToRefs(useUtilStore());
+  const { unmountToast } = useUtilStore();
 </script>
 
 <style scoped lang="scss">

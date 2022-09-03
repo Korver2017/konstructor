@@ -2,15 +2,13 @@ import { defineStore } from 'pinia';
 import { reactive } from 'vue';
 import { apiLogin, apiGetUsers, apiUpdateUser } from '@/api/usersLoader';
 import { useLocalStorage } from '@/composition-api';
-import { useToast } from '@/composition-api';
-import { useLoadingStore } from '@/stores/loading';
+import { useUtilStore } from '@/stores/utils';
 import router from '@/router';
 import Cookies from 'js-cookie';
 const { setItem, getItem } = useLocalStorage();
-const { mountToast } = useToast();
 
 export const useUserStore = defineStore('users', () => {
-  const { mountLoading, unmountLoading } = useLoadingStore();
+  const { mountLoading, unmountLoading, mountToast } = useUtilStore();
   // Default data for fake login.
   const userInputs = reactive({
     account: 'korver@konstructor.com',

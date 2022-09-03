@@ -8,13 +8,13 @@
 </template>
 
 <script setup>
+  import { useUtilStore } from '@/stores/utils';
   import { useUserStore } from '@/stores/users';
-  import { useLoadingStore } from '@/stores/loading';
   import { useToolStore } from '@/stores/tools';
   import { usePackageStore } from '@/stores/packages';
   const { user } = storeToRefs(useUserStore());
-  const { isLoading } = storeToRefs(useLoadingStore());
-  const { mountLoading, unmountLoading } = useLoadingStore();
+  const { isLoading } = storeToRefs(useUtilStore());
+  const { mountLoading, unmountLoading } = useUtilStore();
   const { getTools } = useToolStore();
   const { getPackages } = usePackageStore();
 
