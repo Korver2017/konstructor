@@ -1,6 +1,41 @@
-# vookmark
+# Konstructor
 
-This template should help get you started developing with Vue 3 in Vite.
+A collection of resources for developing websites and applications.
+
+## About The Project
+
+### Built With
+
+![Vue](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+## Roadmap
+
+### In-Progress
+
+- [x] Loading effect
+- [x] Router guard
+- [x] Error handling
+- [x] Retrieve resources timing
+- [ ] Composition-api syntax
+- [ ] Account management
+  - [ ] My favorites management
+  - [ ] User settings management
+
+### Backlog
+
+- [ ] Users management
+- [ ] Authentication management
+- [ ] Modify resource
+  - [ ] Add resource
+  - [ ] Edit resource
+  - [ ] Remove resource
+- [ ] Home page layout update
+- [ ] Category/Resources
+  - [ ] Pagination
+  - [ ] Cover image
+- [ ] And others...
 
 ## Recommended IDE Setup
 

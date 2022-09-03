@@ -1,0 +1,66 @@
+[
+  {
+    "account": "admin@admin.com",
+    "name": "Admin",
+    "role": "admin",
+    "isAuthenticated": true,
+    "favoriteIds": ["color-tools-1", "icons-1", "icons-2", "icons-4", "avatars-1", "animations-2"],
+    "favorites": {
+      "color-tools": {
+        "title": "Color Tools",
+        "resources": [
+          {
+            "id": "color-tools-1",
+            "name": "Eva Design System",
+            "subtitle": "Deep learning color generator",
+            "url": "https://colors.eva.design/",
+            "image": "",
+            "tags": ["Color Tool", "Semantic Color"]
+          }
+        ]
+      },
+      "icons": {
+        "title": "Icons",
+        "resources": [
+          {
+            "id": "icons-1",
+            "name": "Icônes",
+            "subtitle": "",
+            "url": "https://icones.js.org/",
+            "image": "",
+            "tags": ["Icon"]
+          },
+          {
+            "id": "icons-2",
+            "name": "Tabler Icons",
+            "subtitle": "1424 Open source free SVG icons. Highly customizable. No attribution required. For commercial use.",
+            "url": "https://tablericons.com/",
+            "image": "https://tablericons.com/tablericons_og.png",
+            "tags": ["Icon"]
+          },
+          {
+            "id": "icons-4",
+            "name": "Iconhub",
+            "subtitle": "Save your penny and time creating from scratch, use these diverse Icon set to complete your awesome design",
+            "url": "https://iconhub.io/",
+            "image": "https://iconhub.io/img/hero.jpeg",
+            "tags": ["Icon"]
+          }
+        ]
+      },
+      "avatars": {
+        "title": "Avatars",
+        "resources": [
+          {
+            "id": "avatars-1",
+            "name": "Boring Avatars",
+            "subtitle": "Avatar generator playground",
+            "url": "https://boringavatars.com/",
+            "image": "https://boringavatars.com/boring-avatars.jpg",
+            "tags": ["Avatar"]
+          }
+        ]
+      }
+    }
+  }
+]
