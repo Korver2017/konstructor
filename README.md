@@ -18,10 +18,11 @@ A collection of resources for developing websites and applications.
 - [x] Router guard
 - [x] Error handling
 - [x] Retrieve resources timing
-- [ ] Composition-api syntax
+- [x] Composition-api syntax
+- [x] Home page layout update
 - [ ] Account management
   - [ ] My favorites management
-  - [ ] User settings management
+  - [x] User settings management
 
 ### Backlog
 
@@ -31,7 +32,6 @@ A collection of resources for developing websites and applications.
   - [ ] Add resource
   - [ ] Edit resource
   - [ ] Remove resource
-- [ ] Home page layout update
 - [ ] Category/Resources
   - [ ] Pagination
   - [ ] Cover image
