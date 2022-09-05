@@ -1,4 +1,4 @@
-# Konstructor
+# 🧱 Konstructor
 
 A collection of resources for developing websites and applications.
 
@@ -16,7 +16,9 @@ A collection of resources for developing websites and applications.
 
 - [x] Loading effect
 - [x] Router guard
-- [x] Error handling
+- [ ] Error handling
+  - [x] Catch errors
+  - [ ] Add UI to interaction
 - [x] Retrieve resources timing
 - [x] Composition-api syntax
 - [x] Home page layout update
