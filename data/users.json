@@ -4,7 +4,7 @@
     "name": "Admin",
     "role": "admin",
     "isAuthenticated": true,
-    "favoriteIds": ["color-tools-1", "icons-1", "icons-2", "icons-4", "avatars-1", "animations-2"],
+    "favoriteIds": ["color-tools-1", "icons-1", "icons-2", "icons-4", "avatars-1", "backgrounds-4", "decorations-1", "decorations-2", "decorations-3", "animations-2", "animations-4", "animations-5", "time-1", "time-2", "charts-1", "charts-2", "charts-3", "charts-4"],
     "favorites": {
       "color-tools": {
         "title": "Color Tools",
@@ -58,6 +58,135 @@
             "url": "https://boringavatars.com/",
             "image": "https://boringavatars.com/boring-avatars.jpg",
             "tags": ["Avatar"]
+          }
+        ]
+      },
+      "backgrounds": {
+        "title": "Backgrounds",
+        "resources": [
+          {
+            "id": "backgrounds-4",
+            "name": "CSS Background Patterns by MagicPattern",
+            "subtitle": "Beautiful pure CSS background patterns that you can actually use in your projects!",
+            "url": "https://www.magicpattern.design/tools/css-backgrounds",
+            "image": "https://storage.googleapis.com/brandflow-bucket/magipattern/css-backgrounds.jpg",
+            "tags": ["Background"]
+          }
+        ]
+      },
+      "decorations": {
+        "title": "Decorations",
+        "resources": [
+          {
+            "id": "decorations-1",
+            "name": "Blobmaker",
+            "subtitle": "Make organic SVG shapes for your next design",
+            "url": "https://www.blobmaker.app/",
+            "image": "https://www.blobmaker.app/static/blobmaker-cover-703617855c36334d464a0690d71f7a75.jpg",
+            "tags": ["Decoration"]
+          },
+          {
+            "id": "decorations-2",
+            "name": "Get Waves",
+            "subtitle": "Create SVG waves for your next design",
+            "url": "https://getwaves.io/",
+            "image": "https://www.getwaves.io/static/getwaves-cover-ac8c651e2f1863b1e8df743f946fdf10.jpg",
+            "tags": ["Decoration"]
+          },
+          {
+            "id": "decorations-3",
+            "name": "Neumorphism",
+            "subtitle": "Soft UI CSS shadow generator",
+            "url": "https://neumorphism.io/#e0e0e0",
+            "image": "https://neumorphism.io/ogImage.png",
+            "tags": ["Decoration"]
+          }
+        ]
+      },
+      "animations": {
+        "title": "Animations",
+        "resources": [
+          {
+            "id": "animations-2",
+            "name": "vivus",
+            "subtitle": "JavaScript library to make drawing animation on SVG",
+            "url": "https://github.com/maxwellito/vivus",
+            "image": "",
+            "tags": ["Animation"]
+          },
+          {
+            "id": "animations-4",
+            "name": "mo.js",
+            "subtitle": "",
+            "url": "https://mojs.github.io/",
+            "image": "",
+            "tags": ["Animation"]
+          },
+          {
+            "id": "animations-5",
+            "name": "GSAP - GreenSock",
+            "subtitle": "",
+            "url": "https://greensock.com/gsap/",
+            "image": "https://greensock.com/uploads/monthly_2020_05/greensock-thumb.png.640b7d423125b0ad11e9f2af1cbf94c9.png",
+            "tags": ["Animation"]
+          }
+        ]
+      },
+      "time": {
+        "title": "Time",
+        "resources": [
+          {
+            "id": "time-1",
+            "name": "Day.js",
+            "subtitle": "2kB JavaScript date utility library",
+            "url": "https://day.js.org/",
+            "image": "",
+            "tags": ["Time"]
+          },
+          {
+            "id": "time-2",
+            "name": "date-fns",
+            "subtitle": "Modern JavaScript date utility library",
+            "url": "https://date-fns.org/",
+            "image": "http://cdn.date-fns.org/card.png",
+            "tags": ["Time"]
+          }
+        ]
+      },
+      "charts": {
+        "title": "Charts",
+        "resources": [
+          {
+            "id": "charts-1",
+            "name": "Chart.js",
+            "subtitle": "Open source HTML5 Charts for your website",
+            "url": "https://www.chartjs.org/",
+            "image": "",
+            "tags": ["Chart"]
+          },
+          {
+            "id": "charts-2",
+            "name": "D3.js",
+            "subtitle": "Data-Driven Documents",
+            "url": "https://d3js.org/",
+            "image": "https://d3js.org/preview.png",
+            "tags": ["Chart"]
+          },
+          {
+            "id": "charts-3",
+            "name": "ApexCharts.js",
+            "subtitle": "Open Source JavaScript Charts for your website",
+            "url": "https://apexcharts.com/",
+            "image": "",
+            "tags": ["Chart"]
+          },
+          {
+            "id": "charts-4",
+            "name": "Apache ECharts",
+            "subtitle": "",
+            "url": "https://echarts.apache.org/en/index.html",
+            "image": "",
+            "tags": ["Chart"]
           }
         ]
       }
