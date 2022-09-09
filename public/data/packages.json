@@ -6,7 +6,7 @@
         "id": "animations-1",
         "name": "ScrollReveal",
         "subtitle": "Animate elements as they scroll into view.",
-        "url": "https://github.com/jlmakes/scrollreveal",
+        "url": "https://scrollrevealjs.org/",
         "image": "https://scrollrevealjs.org/img/share.png",
         "tags": ["Animation"]
       },
@@ -14,9 +14,115 @@
         "id": "animations-2",
         "name": "vivus",
         "subtitle": "JavaScript library to make drawing animation on SVG",
-        "url": "https://github.com/maxwellito/vivus",
+        "url": "https://maxwellito.github.io/vivus/",
         "image": "",
         "tags": ["Animation"]
+      },
+      {
+        "id": "animations-3",
+        "name": "Typed.js",
+        "subtitle": "JavaScript Animated Typing with Typed.js | by Matt Boldt",
+        "url": "https://mattboldt.com/demos/typed-js/",
+        "image": "",
+        "tags": ["Animation"]
+      },
+      {
+        "id": "animations-4",
+        "name": "mo.js",
+        "subtitle": "",
+        "url": "https://mojs.github.io/",
+        "image": "",
+        "tags": ["Animation"]
+      },
+      {
+        "id": "animations-5",
+        "name": "GSAP - GreenSock",
+        "subtitle": "",
+        "url": "https://greensock.com/gsap/",
+        "image": "https://greensock.com/uploads/monthly_2020_05/greensock-thumb.png.640b7d423125b0ad11e9f2af1cbf94c9.png",
+        "tags": ["Animation"]
+      },
+      {
+        "id": "animations-6",
+        "name": "Three.js",
+        "subtitle": "JavaScript 3D Library",
+        "url": "https://threejs.org/",
+        "image": "https://threejs.org/files/share.png",
+        "tags": ["Animation"]
+      }
+    ]
+  },
+  "time": {
+    "title": "Time",
+    "resources": [
+      {
+        "id": "time-1",
+        "name": "Day.js",
+        "subtitle": "2kB JavaScript date utility library",
+        "url": "https://day.js.org/",
+        "image": "",
+        "tags": ["Time"]
+      },
+      {
+        "id": "time-2",
+        "name": "date-fns",
+        "subtitle": "Modern JavaScript date utility library",
+        "url": "https://date-fns.org/",
+        "image": "http://cdn.date-fns.org/card.png",
+        "tags": ["Time"]
+      },
+      {
+        "id": "time-3",
+        "name": "Luxon",
+        "subtitle": "A powerful, modern, and friendly wrapper for JavaScript dates and times.",
+        "url": "https://moment.github.io/luxon/#/",
+        "image": "",
+        "tags": ["Time"]
+      },
+      {
+        "id": "time-4",
+        "name": "js-joda",
+        "subtitle": "Immutable date and time library for JavaScript",
+        "url": "https://js-joda.github.io/js-joda/",
+        "image": "",
+        "tags": ["Time"]
+      }
+    ]
+  },
+  "charts": {
+    "title": "Charts",
+    "resources": [
+      {
+        "id": "charts-1",
+        "name": "Chart.js",
+        "subtitle": "Open source HTML5 Charts for your website",
+        "url": "https://www.chartjs.org/",
+        "image": "",
+        "tags": ["Chart"]
+      },
+      {
+        "id": "charts-2",
+        "name": "D3.js",
+        "subtitle": "Data-Driven Documents",
+        "url": "https://d3js.org/",
+        "image": "https://d3js.org/preview.png",
+        "tags": ["Chart"]
+      },
+      {
+        "id": "charts-3",
+        "name": "ApexCharts.js",
+        "subtitle": "Open Source JavaScript Charts for your website",
+        "url": "https://apexcharts.com/",
+        "image": "",
+        "tags": ["Chart"]
+      },
+      {
+        "id": "charts-4",
+        "name": "Apache ECharts",
+        "subtitle": "",
+        "url": "https://echarts.apache.org/en/index.html",
+        "image": "",
+        "tags": ["Chart"]
       }
     ]
   }
