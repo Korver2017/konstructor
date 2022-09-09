@@ -4,6 +4,7 @@ export const tools = [
   { name: 'color-tools', title: 'Color Tools' },
   { name: 'icons', title: 'Icons' },
   { name: 'avatars', title: 'Avatars' },
+  { name: 'backgrounds', title: 'Backgrounds' },
 ];
 
 // Menu-items for the `packages` page.

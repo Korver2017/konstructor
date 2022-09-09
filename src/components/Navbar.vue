@@ -92,7 +92,7 @@
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Packages
+                    NPM Packages
                     <img
                       src="@/assets/img/down-arrow-dark.svg"
                       alt="down-arrow"
