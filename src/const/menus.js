@@ -5,6 +5,7 @@ export const tools = [
   { name: 'icons', title: 'Icons' },
   { name: 'avatars', title: 'Avatars' },
   { name: 'backgrounds', title: 'Backgrounds' },
+  { name: 'decorations', title: 'Decorations' },
 ];
 
 // Menu-items for the `packages` page.

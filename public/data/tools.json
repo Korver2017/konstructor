@@ -114,5 +114,50 @@
         "tags": ["Background"]
       }
     ]
+  },
+  "decorations": {
+    "title": "Decorations",
+    "resources": [
+      {
+        "id": "decorations-1",
+        "name": "Blobmaker",
+        "subtitle": "Make organic SVG shapes for your next design",
+        "url": "https://www.blobmaker.app/",
+        "image": "https://www.blobmaker.app/static/blobmaker-cover-703617855c36334d464a0690d71f7a75.jpg",
+        "tags": ["Decoration"]
+      },
+      {
+        "id": "decorations-2",
+        "name": "Get Waves",
+        "subtitle": "Create SVG waves for your next design",
+        "url": "https://getwaves.io/",
+        "image": "https://www.getwaves.io/static/getwaves-cover-ac8c651e2f1863b1e8df743f946fdf10.jpg",
+        "tags": ["Decoration"]
+      },
+      {
+        "id": "decorations-3",
+        "name": "Neumorphism",
+        "subtitle": "Soft UI CSS shadow generator",
+        "url": "https://neumorphism.io/#e0e0e0",
+        "image": "https://neumorphism.io/ogImage.png",
+        "tags": ["Decoration"]
+      },
+      {
+        "id": "decorations-4",
+        "name": "Fancy Border Radius Generator",
+        "subtitle": "A visual generator to build organic looking shapes with the help of CSS3 border-radius property",
+        "url": "https://9elements.github.io/fancy-border-radius/",
+        "image": "https://9elements.github.io/fancy-border-radius/fancy-border-radius.png",
+        "tags": ["Decoration"]
+      },
+      {
+        "id": "decorations-5",
+        "name": "Glass CSS",
+        "subtitle": "Glassmorphism CSS Effect Generator",
+        "url": "https://css.glass/",
+        "image": "https://css.glass/glassmorphism.png",
+        "tags": ["Decoration"]
+      }
+    ]
   }
 }
