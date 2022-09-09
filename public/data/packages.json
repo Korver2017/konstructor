@@ -6,7 +6,7 @@
         "id": "animations-1",
         "name": "ScrollReveal",
         "subtitle": "Animate elements as they scroll into view.",
-        "url": "https://github.com/jlmakes/scrollreveal",
+        "url": "https://scrollrevealjs.org/",
         "image": "https://scrollrevealjs.org/img/share.png",
         "tags": ["Animation"]
       },
@@ -14,8 +14,40 @@
         "id": "animations-2",
         "name": "vivus",
         "subtitle": "JavaScript library to make drawing animation on SVG",
-        "url": "https://github.com/maxwellito/vivus",
+        "url": "https://maxwellito.github.io/vivus/",
         "image": "",
+        "tags": ["Animation"]
+      },
+      {
+        "id": "animations-3",
+        "name": "Typed.js",
+        "subtitle": "JavaScript Animated Typing with Typed.js | by Matt Boldt",
+        "url": "https://mattboldt.com/demos/typed-js/",
+        "image": "",
+        "tags": ["Animation"]
+      },
+      {
+        "id": "animations-4",
+        "name": "mo.js",
+        "subtitle": "",
+        "url": "https://mojs.github.io/",
+        "image": "",
+        "tags": ["Animation"]
+      },
+      {
+        "id": "animations-5",
+        "name": "GSAP - GreenSock",
+        "subtitle": "",
+        "url": "https://greensock.com/gsap/",
+        "image": "https://greensock.com/uploads/monthly_2020_05/greensock-thumb.png.640b7d423125b0ad11e9f2af1cbf94c9.png",
+        "tags": ["Animation"]
+      },
+      {
+        "id": "animations-6",
+        "name": "Three.js",
+        "subtitle": "JavaScript 3D Library",
+        "url": "https://threejs.org/",
+        "image": "https://threejs.org/files/share.png",
         "tags": ["Animation"]
       }
     ]
