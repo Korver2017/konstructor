@@ -17,6 +17,38 @@
         "url": "https://github.com/maxwellito/vivus",
         "image": "",
         "tags": ["Animation"]
+      },
+      {
+        "id": "animations-3",
+        "name": "Typed.js",
+        "subtitle": "JavaScript Animated Typing with Typed.js | by Matt Boldt",
+        "url": "https://mattboldt.com/demos/typed-js/",
+        "image": "",
+        "tags": ["Animation"]
+      },
+      {
+        "id": "animations-4",
+        "name": "mo.js",
+        "subtitle": "",
+        "url": "https://mojs.github.io/",
+        "image": "",
+        "tags": ["Animation"]
+      },
+      {
+        "id": "animations-5",
+        "name": "GSAP - GreenSock",
+        "subtitle": "",
+        "url": "https://greensock.com/gsap/",
+        "image": "https://greensock.com/uploads/monthly_2020_05/greensock-thumb.png.640b7d423125b0ad11e9f2af1cbf94c9.png",
+        "tags": ["Animation"]
+      },
+      {
+        "id": "animations-6",
+        "name": "Three.js",
+        "subtitle": "JavaScript 3D Library",
+        "url": "https://threejs.org/",
+        "image": "https://threejs.org/files/share.png",
+        "tags": ["Animation"]
       }
     ]
   }

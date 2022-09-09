@@ -77,5 +77,87 @@
         "tags": ["Avatar"]
       }
     ]
+  },
+  "backgrounds": {
+    "title": "Backgrounds",
+    "resources": [
+      {
+        "id": "backgrounds-1",
+        "name": "Haikei",
+        "subtitle": "Generate unique SVG design assets",
+        "url": "https://haikei.app/",
+        "image": "https://haikei.app/haikei-cover.png",
+        "tags": ["Background"]
+      },
+      {
+        "id": "backgrounds-2",
+        "name": "Generate Mesh Gradients",
+        "subtitle": "Generate beautiful and colorful mesh gradients | Download Mesh Gradients PNG | Export mesh gradients PNG",
+        "url": "https://meshgradient.in/",
+        "image": "https://meshy.uxie.io/shot.webp",
+        "tags": ["Background"]
+      },
+      {
+        "id": "backgrounds-3",
+        "name": "Animated CSS Background Generator",
+        "subtitle": "A collection of pure css animated backgrounds with the possibility to customize.",
+        "url": "https://wweb.dev/resources/animated-css-background-generator/",
+        "image": "https://wweb.dev/preview/resources01_zAtYo6WzY.jpg",
+        "tags": ["Background"]
+      },
+      {
+        "id": "backgrounds-4",
+        "name": "CSS Background Patterns by MagicPattern",
+        "subtitle": "Beautiful pure CSS background patterns that you can actually use in your projects!",
+        "url": "https://www.magicpattern.design/tools/css-backgrounds",
+        "image": "https://storage.googleapis.com/brandflow-bucket/magipattern/css-backgrounds.jpg",
+        "tags": ["Background"]
+      }
+    ]
+  },
+  "decorations": {
+    "title": "Decorations",
+    "resources": [
+      {
+        "id": "decorations-1",
+        "name": "Blobmaker",
+        "subtitle": "Make organic SVG shapes for your next design",
+        "url": "https://www.blobmaker.app/",
+        "image": "https://www.blobmaker.app/static/blobmaker-cover-703617855c36334d464a0690d71f7a75.jpg",
+        "tags": ["Decoration"]
+      },
+      {
+        "id": "decorations-2",
+        "name": "Get Waves",
+        "subtitle": "Create SVG waves for your next design",
+        "url": "https://getwaves.io/",
+        "image": "https://www.getwaves.io/static/getwaves-cover-ac8c651e2f1863b1e8df743f946fdf10.jpg",
+        "tags": ["Decoration"]
+      },
+      {
+        "id": "decorations-3",
+        "name": "Neumorphism",
+        "subtitle": "Soft UI CSS shadow generator",
+        "url": "https://neumorphism.io/#e0e0e0",
+        "image": "https://neumorphism.io/ogImage.png",
+        "tags": ["Decoration"]
+      },
+      {
+        "id": "decorations-4",
+        "name": "Fancy Border Radius Generator",
+        "subtitle": "A visual generator to build organic looking shapes with the help of CSS3 border-radius property",
+        "url": "https://9elements.github.io/fancy-border-radius/",
+        "image": "https://9elements.github.io/fancy-border-radius/fancy-border-radius.png",
+        "tags": ["Decoration"]
+      },
+      {
+        "id": "decorations-5",
+        "name": "Glass CSS",
+        "subtitle": "Glassmorphism CSS Effect Generator",
+        "url": "https://css.glass/",
+        "image": "https://css.glass/glassmorphism.png",
+        "tags": ["Decoration"]
+      }
+    ]
   }
 }

@@ -4,12 +4,16 @@ export const tools = [
   { name: 'color-tools', title: 'Color Tools' },
   { name: 'icons', title: 'Icons' },
   { name: 'avatars', title: 'Avatars' },
+  { name: 'backgrounds', title: 'Backgrounds' },
+  { name: 'decorations', title: 'Decorations' },
 ];
 
 // Menu-items for the `packages` page.
 export const packages = [
   { name: 'all', title: 'All' },
   { name: 'animations', title: 'Animations' },
+  { name: 'time', title: 'Time' },
+  { name: 'charts', title: 'Charts' },
 ];
 
 // Menu-items for the `account` page.

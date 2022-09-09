@@ -1,0 +1,39 @@
+{
+  "backgrounds": {
+    "title": "Backgrounds",
+    "resources": [
+      {
+        "id": "backgrounds-1",
+        "name": "Haikei",
+        "subtitle": "Generate unique SVG design assets",
+        "url": "https://haikei.app/",
+        "image": "https://haikei.app/haikei-cover.png",
+        "tags": ["Background"]
+      },
+      {
+        "id": "backgrounds-2",
+        "name": "Generate Mesh Gradients",
+        "subtitle": "Generate beautiful and colorful mesh gradients | Download Mesh Gradients PNG | Export mesh gradients PNG",
+        "url": "https://meshgradient.in/",
+        "image": "https://meshy.uxie.io/shot.webp",
+        "tags": ["Background"]
+      },
+      {
+        "id": "backgrounds-3",
+        "name": "Animated CSS Background Generator",
+        "subtitle": "A collection of pure css animated backgrounds with the possibility to customize.",
+        "url": "https://wweb.dev/resources/animated-css-background-generator/",
+        "image": "https://wweb.dev/preview/resources01_zAtYo6WzY.jpg",
+        "tags": ["Background"]
+      },
+      {
+        "id": "backgrounds-4",
+        "name": "CSS Background Patterns by MagicPattern",
+        "subtitle": "Beautiful pure CSS background patterns that you can actually use in your projects!",
+        "url": "https://www.magicpattern.design/tools/css-backgrounds",
+        "image": "https://storage.googleapis.com/brandflow-bucket/magipattern/css-backgrounds.jpg",
+        "tags": ["Background"]
+      }
+    ]
+  }
+}
