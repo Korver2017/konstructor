@@ -13,6 +13,7 @@ export const packages = [
   { name: 'all', title: 'All' },
   { name: 'animations', title: 'Animations' },
   { name: 'time', title: 'Time' },
+  { name: 'charts', title: 'Charts' },
 ];
 
 // Menu-items for the `account` page.

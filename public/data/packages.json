@@ -88,5 +88,42 @@
         "tags": ["Time"]
       }
     ]
+  },
+  "charts": {
+    "title": "Charts",
+    "resources": [
+      {
+        "id": "charts-1",
+        "name": "Chart.js",
+        "subtitle": "Open source HTML5 Charts for your website",
+        "url": "https://www.chartjs.org/",
+        "image": "",
+        "tags": ["Chart"]
+      },
+      {
+        "id": "charts-2",
+        "name": "D3.js",
+        "subtitle": "Data-Driven Documents",
+        "url": "https://d3js.org/",
+        "image": "https://d3js.org/preview.png",
+        "tags": ["Chart"]
+      },
+      {
+        "id": "charts-3",
+        "name": "ApexCharts.js",
+        "subtitle": "Open Source JavaScript Charts for your website",
+        "url": "https://apexcharts.com/",
+        "image": "",
+        "tags": ["Chart"]
+      },
+      {
+        "id": "charts-4",
+        "name": "Apache ECharts",
+        "subtitle": "",
+        "url": "https://echarts.apache.org/en/index.html",
+        "image": "",
+        "tags": ["Chart"]
+      }
+    ]
   }
 }
