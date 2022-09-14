@@ -7,8 +7,21 @@ const usersLoader = axios.create({
 
 // It may be a `POST` method, but due to deploy to GitHub Pages currently,so we can use `GET` only.
 // We will find a back-end solution to correct it in the future.
-export const apiLogin = (userInputs) =>
-  usersLoader.get('/users.json', userInputs);
+export const apiLogin = (userInputs) => {
+  const { account, password } = userInputs;
+
+  const checker =
+    account !== 'admin@admin.com' ? false : password !== 'admin' ? false : true;
+
+  if (!checker)
+    throw {
+      response: {
+        data: 'Incorrect account or password.',
+      },
+    };
+
+  return usersLoader.get('/users.json');
+};
 
 export const apiGetUsers = () => usersLoader.get('/users.json');
 
