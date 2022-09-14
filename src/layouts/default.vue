@@ -5,6 +5,8 @@
   <Transition>
     <Loader v-if="isLoading" />
   </Transition>
+
+  <Toast />
 </template>
 
 <script setup>

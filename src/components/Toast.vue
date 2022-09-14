@@ -9,7 +9,7 @@
           aria-atomic="true"
         >
           <div class="toast-body text-center">
-            User data updated successfully!
+            {{ message }}
             <hr class="horizontal dark" />
             <div class="d-flex justify-content-center">
               <button
@@ -29,7 +29,7 @@
 
 <script setup>
   import { useUtilStore } from '@/stores/utils';
-  const { isShown } = storeToRefs(useUtilStore());
+  const { isShown, message } = storeToRefs(useUtilStore());
   const { unmountToast } = useUtilStore();
 </script>
 

@@ -33,7 +33,7 @@ export const useUserStore = defineStore('users', () => {
       syncLocalStorage();
       Cookies.set('konstructor-token', `${userInputs.account}-fake-token`);
     } catch (error) {
-      return alert(error.response.data);
+      mountToast(error.response.data);
     } finally {
       unmountLoading();
     }
@@ -78,7 +78,7 @@ export const useUserStore = defineStore('users', () => {
       const { account, name, role } = updatedUser;
       setItem(account, { account, name, role });
 
-      mountToast();
+      mountToast('User data update successfully.');
       getUser();
     } catch (error) {
       console.log(error);
