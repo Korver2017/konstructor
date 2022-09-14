@@ -33,10 +33,11 @@ export const useUserStore = defineStore('users', () => {
       syncLocalStorage();
       Cookies.set('konstructor-token', `${userInputs.account}-fake-token`);
     } catch (error) {
-      console.log(error);
+      return alert(error.response.data);
+    } finally {
+      unmountLoading();
     }
 
-    unmountLoading();
     router.push('/');
   };
 
