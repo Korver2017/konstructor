@@ -15,6 +15,7 @@
               >Konstructor</router-link
             >
             <button
+              @click="toggleCollapsed"
               class="navbar-toggler shadow-none ms-md-2"
               type="button"
               data-bs-toggle="collapse"
@@ -30,24 +31,28 @@
               </span>
             </button>
             <div
-              class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0"
+              class="navbar-collapse w-100 pt-3 pb-2 py-lg-0"
+              :class="{ collapse: isCollapsed }"
               id="navigation"
             >
-              <ul class="navbar-nav navbar-nav-hover mx-auto">
-                <router-link
-                  role="button"
-                  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                  id="dropdownMenuPages"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  tag="li"
-                  to="/"
-                  exact
-                >
-                  Home
-                </router-link>
+              <ul ref="nav" class="navbar-nav navbar-nav-hover mx-auto">
+                <li class="nav-item dropdown dropdown-hover mx-2">
+                  <router-link
+                    role="button"
+                    class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                    id="dropdownMenuPages"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    tag="a"
+                    to="/"
+                    exact
+                  >
+                    Home
+                  </router-link>
+                </li>
                 <li class="nav-item dropdown dropdown-hover mx-2">
                   <a
+                    @click.self="toggleItemsCollapsed($event)"
                     role="button"
                     class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
                     :class="{
@@ -79,10 +84,22 @@
                         </router-link>
                       </div>
                     </div>
+                    <div class="d-lg-none">
+                      <div class="col-12 py-2">
+                        <router-link
+                          v-for="menu in tools"
+                          :key="menu.name"
+                          :to="`/tools/${menu.name}`"
+                          class="dropdown-item border-radius-md"
+                          ><span>{{ menu.title }}</span>
+                        </router-link>
+                      </div>
+                    </div>
                   </div>
                 </li>
                 <li class="nav-item dropdown dropdown-hover mx-2">
                   <a
+                    @click.self="toggleItemsCollapsed($event)"
                     role="button"
                     class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
                     :class="{
@@ -114,11 +131,23 @@
                         </router-link>
                       </div>
                     </div>
+                    <div class="d-lg-none">
+                      <div class="col-12 py-2">
+                        <router-link
+                          v-for="menu in packages"
+                          :key="menu.name"
+                          :to="`/packages/${menu.name}`"
+                          class="dropdown-item border-radius-md"
+                          ><span>{{ menu.title }}</span>
+                        </router-link>
+                      </div>
+                    </div>
                   </div>
                 </li>
 
                 <li class="nav-item dropdown dropdown-hover mx-2">
                   <a
+                    @click.self="toggleItemsCollapsed($event)"
                     role="button"
                     class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
                     :class="{
@@ -152,6 +181,19 @@
                         </router-link>
                       </div>
                     </div>
+                    <div class="d-lg-none">
+                      <div class="col-12 py-2">
+                        <router-link
+                          v-for="menu in account"
+                          v-on="menu.name === 'logout' ? { click: logout } : {}"
+                          :key="menu.name"
+                          :to="`/account/${menu.name}`"
+                          :class="{ 'text-danger': menu.name === 'logout' }"
+                          class="dropdown-item border-radius-md"
+                          ><span>{{ menu.title }}</span>
+                        </router-link>
+                      </div>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -174,8 +216,14 @@
   const submenuIsActive = (input) => {
     const paths = Array.isArray(input) ? input : [input];
     return paths.some((path) => {
-      return route.path.indexOf(path) === 0; // current path starts with this path string
+      // current path starts with this path string
+      return route.path.indexOf(path) === 0;
     });
+  };
+
+  const isCollapsed = ref(true);
+  const toggleCollapsed = () => {
+    isCollapsed.value = !isCollapsed.value;
   };
 </script>
 
