@@ -1,12 +1,19 @@
 <template>
-  <Navbar v-if="user.data.isAuthenticated" />
-  <router-view />
+  <div @click="handleCollapseMenu($event)">
+    <Navbar
+      ref="navbar"
+      :menuIsCollapsed="menuIsCollapsed"
+      @handleToggleCollapsed="handleToggleCollapsed"
+      v-if="user.data.isAuthenticated"
+    />
+    <router-view />
 
-  <Transition>
-    <Loader v-if="isLoading" />
-  </Transition>
+    <Transition>
+      <Loader v-if="isLoading" />
+    </Transition>
 
-  <Toast />
+    <Toast />
+  </div>
 </template>
 
 <script setup>
@@ -32,6 +39,15 @@
     clearTools();
     clearPackages();
   });
+
+  const navbar = ref(null);
+  const menuIsCollapsed = ref(true);
+  const handleCollapseMenu = ($event) => {
+    if (!navbar.value) return;
+    if (!navbar.value.$el.contains($event.target)) menuIsCollapsed.value = true;
+  };
+  const handleToggleCollapsed = (isCollapsed) =>
+    (menuIsCollapsed.value = isCollapsed);
 </script>
 
 <style scoped>

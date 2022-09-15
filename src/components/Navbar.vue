@@ -212,6 +212,13 @@
   import { useUserStore } from '@/stores/users';
   const { logout } = useUserStore();
   const route = useRoute();
+  const props = defineProps({
+    menuIsCollapsed: {
+      type: Boolean,
+      default: true,
+    },
+  });
+  const emit = defineEmits(['handleToggleCollapsed']);
 
   const submenuIsActive = (input) => {
     const paths = Array.isArray(input) ? input : [input];
@@ -222,8 +229,13 @@
   };
 
   const isCollapsed = ref(true);
+  watch(
+    () => props.menuIsCollapsed,
+    () => (isCollapsed.value = props.menuIsCollapsed)
+  );
   const toggleCollapsed = () => {
     isCollapsed.value = !isCollapsed.value;
+    emit('handleToggleCollapsed', isCollapsed.value);
   };
 
   const nav = ref(null);
