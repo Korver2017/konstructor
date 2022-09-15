@@ -115,9 +115,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Toast component -->
-  <Toast />
 </template>
 
 <script setup>
