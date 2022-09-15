@@ -225,6 +225,21 @@
   const toggleCollapsed = () => {
     isCollapsed.value = !isCollapsed.value;
   };
+
+  const nav = ref(null);
+  const toggleItemsCollapsed = ($event) => {
+    const sibling = $event.target.nextSibling;
+    const isContained = sibling.classList.contains('show');
+
+    nav.value.childNodes.forEach((node) => {
+      if (!node.childNodes[1]) return;
+
+      node.childNodes[1].classList.remove('show');
+      if (isContained) return;
+
+      return sibling.classList.add('show');
+    });
+  };
 </script>
 
 <style scoped lang="scss">
