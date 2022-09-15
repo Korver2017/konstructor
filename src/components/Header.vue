@@ -27,7 +27,7 @@
         </div>
       </div>
     </div>
-    <div class="position-absolute w-100 z-index-1 bottom-0">
+    <div class="position-absolute w-100 z-index-1 bottom-1">
       <svg
         class="waves"
         xmlns="http://www.w3.org/2000/svg"
