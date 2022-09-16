@@ -9,25 +9,27 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-start">
-            <h1 class="text-white text-center display-1 time-text">
+            <h1 class="time-text text-white text-center my-4">
               {{ time }}
               <span class="text-white" id="typed"></span>
             </h1>
-            <h1 class="text-white display-3">{{ greeting }}</h1>
-            <p class="text-white text-start pe-5 mt-4 quote-content display-6">
-              {{ quote.data.content }}
-              <br />
-              <span
-                class="text-white text-start pe-5 mt-7 quote-author display-6"
-                >by {{ quote.data.author }}</span
-              >
-            </p>
-            <br />
+            <h1 class="text-white display-4 greeting">{{ greeting }}</h1>
+
+            <figure>
+              <blockquote class="blockquote">
+                <p class="text-white text-start pe-5 ps-3 my-4 display-6">
+                  {{ quote.data.content }}
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer text-white display-6">
+                {{ quote.data.author }}
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>
     </div>
-    <div class="position-absolute w-100 z-index-1 bottom-1">
+    <div class="position-absolute w-100 z-index-1 bottom-0">
       <svg
         class="waves"
         xmlns="http://www.w3.org/2000/svg"
@@ -168,15 +170,20 @@
 
 <style scoped lang="scss">
   .time-text {
-    font-size: 130px;
-    margin-bottom: 50px;
+    font-size: calc(3rem + 4.5vw);
+    font-weight: 300;
+    line-height: 1.2;
   }
-  .quote {
-    &-content {
-      font-size: 30px;
+  .greeting {
+    font-size: calc(1rem + 2.7vw);
+  }
+  .blockquote {
+    border-left: 5px solid #fff;
+    p {
+      font-size: calc(0.75rem + 1.5vw);
     }
-    &-author {
-      font-size: 20px;
+    &-footer {
+      font-size: calc(1.5vw);
     }
   }
 </style>
