@@ -1,5 +1,5 @@
 <template>
-  <section class="py-7 bg-gray-100 position-relative">
+  <section class="settings py-7 bg-gray-100 position-relative">
     <div class="container">
       <div class="row mt-3">
         <div class="col-lg-6 mx-auto text-center">
@@ -10,9 +10,9 @@
         <div class="col-lg-8 mx-auto">
           <div class="card">
             <div class="row">
-              <div class="col-lg-6 d-flex">
+              <div class="col-lg-6 d-flex justify-content-center">
                 <div
-                  class="bg-gradient-dark my-lg-3 ms-lg-3 border-radius-md w-95"
+                  class="bg-gradient-dark my-3 ms-lg-3 border-radius-md w-95"
                 >
                   <img
                     src="@/assets/img/shapes/waves-white.svg"
@@ -32,7 +32,7 @@
               </div>
               <div class="col-lg-6">
                 <form id="contact-form" method="post" autocomplete="off">
-                  <div class="card-body position-relative p-3 ps-0">
+                  <div class="card-body position-relative p-3">
                     <div class="row mt-4">
                       <div class="col-md-12">
                         <label>Account</label>
@@ -131,4 +131,8 @@
   const v$ = useVuelidate(rules, updatedUser);
 </script>
 
-<style scoped></style>
+<style scoped>
+  .settings {
+    height: 100vh;
+  }
+</style>
