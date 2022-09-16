@@ -17,7 +17,7 @@
                   <img
                     src="@/assets/img/shapes/waves-white.svg"
                     alt="pattern-lines"
-                    class="position-absolute start-0 top-0 h-100 opacity-6"
+                    class="position-absolute start-0 top-0 h-100 w-100 opacity-6"
                   />
                   <div class="card-body p-5 position-relative">
                     <h3 class="text-white">{{ user.data.name }}</h3>
@@ -133,6 +133,6 @@
 
 <style scoped>
   .settings {
-    height: 100vh;
+    /* height: 100vh; */
   }
 </style>
